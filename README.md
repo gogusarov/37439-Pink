@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [gregchampion](https://htmlacademy.ru/profile/id37439).
-* Наставник: `Unknown`.
+* Наставник: 'Андрей Серёдкин'.
 
 --
 
