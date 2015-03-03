@@ -1,17 +1,179 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
   <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
-
 <body>
-
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
-
-  <!-- <script src="js/script.js"></script> -->
-
+  <header class="page-header">
+    <div class="page-header__wrap">
+      <a href="" class="page-header__logo-link"><img src="logo.png" alt="Pink"></a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="">Информация</a></li>
+          <li><a href="">Возможности</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">Стоимость</a></li>
+        </ul>
+        <a href="" class="main-nav__toggle"><img src="hamburger.png" alt=""></a>
+      </nav>
+    </div>
+  </header>
+  
+  
+  
+  <main>
+    <section class="app-download">
+      <div class="app-download__center">
+        <button class="app-download__button"></button>
+        <div class="app-download__os">
+          <a href=""><img src="ios.png" alt=""></a>
+          <a href=""><img src="android.png" alt=""></a>
+          <a href=""><img src="windows-phone.png" alt=""></a>
+        </div>
+        <p class="app-download__description">Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windowds 8</p>
+      </div>
+    </section>
+    
+    <section class="about-app">
+      <div class="about-app__center">
+        <p class="about-app__promo">Устали от серости мегаполиса?</p>
+        <p class="about-app__promo">Нам есть, что вам предложить!</p>
+        <div class="about-app__item">
+          <span>Поднимает настроение</span>
+          <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
+        </div>
+        <div class="about-app__item">
+          <span>Меняет мир вокруг</span>
+          <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+        </div>
+        <div class="about-app__item">
+          <span>Заводит новых друзей</span>
+          <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+        </div>
+        <img class="about-app__screenshot" src="app-screenshot.png" alt="">
+      </div>
+    </section>
+    
+    <section class="comments">
+      <div class="comments__center">
+        <div class="slider-comments">
+          <div class="slider-comments__item">
+            <span class="slider-comments__author">Николай Петров</span>
+            <p class="slider-comments__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+          </div>
+          <div class="slider-comments__item">
+            <span class="slider-comments__author"></span>
+            <p class="slider-comments__text"></p>
+          </div>
+          <div class="slider-comments__item">
+            <span class="slider-comments__author"></span>
+            <p class="slider-comments__text"></p>
+          </div>
+          <div class="slider-comments__controls">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="tariffes">
+      <div class="tariffes__center">
+        <div class="slider-tariffes">
+          <div class="slider-tariffes__item">
+            <div class="slider-tariffes__header">
+              <span class="slider-tariffes__name">Стандарт</span>
+              <span class="slider-tariffes__price">3,99 USD</span>
+            </div>
+            <table class="slider-tariffes__features">
+              <tr>
+                <td>Розовый фильтр</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Смайлики</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Комментарии</td>
+                <td><img src="price" alt=""></td>
+              </tr>
+            </table>
+          </div>
+          <div class="slider-tariffes__item">
+            <div class="slider-tariffes__header">
+              <span class="slider-tariffes__name"></span>
+              <span class="slider-tariffes__price"></span>
+            </div>
+            <table class="slider-tariffes__features">
+              <tr>
+                <td>Розовый фильтр</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Смайлики</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Комментарии</td>
+                <td><img src="price" alt=""></td>
+              </tr>
+            </table>
+          </div>
+          <div class="slider-tariffes__item">
+            <div class="slider-tariffes__header">
+              <span class="slider-tariffes__name"></span>
+              <span class="slider-tariffes__price"></span>
+            </div>
+            <table class="slider-tariffes__features">
+              <tr>
+                <td>Розовый фильтр</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Смайлики</td>
+                <td><img src="check.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>Комментарии</td>
+                <td><img src="price" alt=""></td>
+              </tr>
+            </table>
+          </div>
+          <div class="slider-tariffes__controls">
+            <a href=""></a>
+            <a href=""></a>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  
+  
+  <footer class="page-footer">
+    <div class="page-footer__center">
+      <p class="page-footer__appeal">Остались вопросы? Свяжитесь с нами!</p>
+      <div class="contacts">
+        <div class="contacts__item">
+          <span>Звоните:</span>
+          <span>8 (800) 1000 900</span>
+        </div>
+        <div class="contacts__item">
+          <span>Пишите:</span>
+          <span>hello@pinkapp.ru</span>
+        </div>
+        <div class="contacts__item">
+          <span>Приезжайте в гости:</span>
+          <span>Санкт-Петербург, Невский проспект, д. 20</span>
+        </div>
+      </div>
+    </div>
+    <img src="map.png" alt="" class="page-footer__map">
+  </footer>
 </body>
 </html>
