@@ -1,32 +1,57 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-
-    // Lint Spaces in code
-    lintspaces: {
-      all: {
-        src: [
-          '*.html'
-        ],
-        options: {
-          newline: true,
-          newlineMaximum: 2,
-          trailingspaces: true,
-          indentationGuess: true,
-          editorconfig: '.editorconfig',
-          ignores: [
-            'html-comments',
-            'js-comments'
-          ],
-          showTypes: true,
-          showCodes: true
+    coffee: {
+      options: {
+        bare: true
+      },
+      scripts: {
+        expand: true,
+        flatten: true,
+        cwd: 'coffee/',
+        src: ['*.coffee'],
+        dest: 'js/',
+        ext: '.js'
+      }
+    },
+    less: {
+      style: {
+        files: {
+          'css/style.css': ['less/style.less']
+        }
+      }
+    },
+    watch: {
+      options: {
+        spawn: false,
+        livereload: true
+      },
+      style: {
+        files: ['less/*.less'],
+        tasks: ['newer:less']
+      }
+    },
+    concat: {
+      dist: {
+        src: ['js/*.js'],
+        dest: 'dist/js/all.js'
+      }
+    },
+    uglify: {
+      dist: {
+        files: {
+          'dist/js/all.min.js': ['dist/js/all.js']
         }
       }
     }
   });
-
-  grunt.loadNpmTasks('grunt-lintspaces');
-
-  grunt.registerTask('lint', ['lintspaces']);
+  grunt.loadNpmTasks('grunt-contrib-coffee');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-newer');
+  
+ 
+  //grunt.registerTask('default', ['less', 'watch'])
 };
