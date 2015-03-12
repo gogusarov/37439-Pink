@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,10 +39,15 @@
       </div>
     </div>
     
-    <div class="about-app">
+    <div class="promo">
       <div class="center-wrapper">
-        <p class="about-app__promo">Устали от серости мегаполиса?</p>
-        <p class="about-app__promo">Нам есть, что вам предложить!</p>
+        <p class="promo__item">Устали от серости мегаполиса?</p>
+        <p class="promo__item">Нам есть, что вам предложить!</p>
+      </div>
+    </div>
+    
+    <div class=about-app>  
+      <div class="center-wrapper">
         <ul class="about-app__list">
           <li>
             <strong>Поднимает настроение</strong>
@@ -64,24 +69,18 @@
     <section class="comments">
       <div class="center-wrapper">
         <div class="slider-comments">
-          <div class="slider-comments__item">
-            <blockquote>
-              <cite>Николай Петров</cite>
-              <p>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-            </blockquote>
-          </div>
-          <div class="slider-comments__item">
-            <blockquote>
-              <cite>Петр Николаев</cite>
-              <p>Не верьте ничему из того, что сказал Николай Петров!</p>
-            </blockquote>
-          </div>
-          <div class="slider-comments__item">
-            <blockquote>
-              <cite>Anonymous</cite>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
-            </blockquote>
-          </div>
+          <blockquote class="slider-comments__item">
+            <cite>Николай Петров</cite>
+            <p>&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
+          </blockquote>
+          <blockquote class="slider-comments__item">
+            <cite>Петр Николаев</cite>
+            <p>&laquo;Не верьте ничему из того, что сказал Николай Петров!&raquo;</p>
+          </blockquote>
+          <blockquote class="slider-comments__item">
+            <cite>Anonymous</cite>
+            <p>&laquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.&raquo;</p>
+          </blockquote>
           <div class="controls">
             <a class="controls__item controls__item--active" href=""></a>
             <a class="controls__item" href=""></a>

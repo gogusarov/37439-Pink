@@ -2,24 +2,82 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10px;
 }
 a {
+  color: #f2f2f2;
   text-decoration: none;
 }
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
+}
+html,
+css {
+  line-height: 1.2;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 10px;
+}
+.main-nav__appeal {
+  font-size: 2.4rem;
+}
+.app-download {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.btn {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.promo {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.about-app__list strong {
+  font-size: 1.8rem;
+}
+.about-app__list p {
+  font-size: 1.4rem;
+}
+.slider-comments cite {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.slider-comments p {
+  font-size: 1.4rem;
+}
+.tariffs td {
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.tariffs__name {
+  font-size: 1.8rem;
+  font-weigth: 700;
+}
+.tariffs__price {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.page-footer__appeal {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.contacts__item p:first-child {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.contacts__item p:last-child {
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 .center-wrapper {
   width: 280px;
   margin: 0 auto;
+  text-align: center;
 }
-.page-header:after {
+.page-header {
   content: '';
-  display: table;
+  display: block;
   clear: both;
 }
 .page-header__logo-link {
@@ -48,32 +106,22 @@ ul {
   bottom: 10px;
 }
 .main-nav__appeal {
-  text-align: center;
   padding-top: 40px;
-  font-size: 2.4rem;
-}
-.main-nav__list li {
-  text-align: center;
 }
 .main-nav__list {
   display: none;
+  list-style: none;
 }
 .app-download {
-  text-align: center;
   background: #1d2631;
   color: white;
-  font-size: 1.4rem;
-  font-weight: 300;
 }
 .app-download__links a {
   display: inline-block;
   vertical-align: top;
-  color: white;
 }
 .btn {
   display: inline-block;
-  font-size: 1.8rem;
-  font-weight: 700;
   border: 3px solid white;
   border-radius: 28px;
   padding: 14px 35px;
@@ -81,34 +129,16 @@ ul {
   cursor: pointer;
 }
 .about-app {
-  text-align: center;
-}
-.about-app__promo {
-  font-size: 2.4rem;
-  font-weight: 300;
-}
-.about-app__list {
   background: #f2f2f2;
 }
-.about-app__list strong {
-  font-size: 1.8rem;
+.about-app__list {
+  list-style: none;
 }
-.about-app__list p {
-  font-size: 1.4rem;
-}
-.slider-comments {
-  text-align: center;
-}
-.slider-comments__item blockquote {
+.slider-comments__item {
   margin: 0;
 }
-.slider-comments__item cite {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1.8rem;
-}
-.slider-comments__item p {
-  font-size: 1.4rem;
+.controls {
+  text-align: center;
 }
 .controls__item {
   display: inline-block;
@@ -132,43 +162,29 @@ ul {
 }
 .tariffs th {
   width: 280px;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #e5e5e5;
 }
 .tariffs td {
   text-align: left;
-  font-size: 1.4rem;
-  font-weight: 300;
   text-transform: uppercase;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #e5e5e5;
 }
 .tariffs__name {
   color: white;
-  font-size: 1.8rem;
-  font-weigth: 700;
 }
 .tariffs__price {
   color: white;
-  font-size: 2.4rem;
-  font-weight: 300;
 }
 .tariffs .controls {
   padding: 40px;
-  text-align: center;
   background: #f2f2f2;
 }
-.page-footer {
-  text-align: center;
+.contacts {
+  list-style: none;
 }
-.page-footer__appeal {
-  font-size: 2.4rem;
-  font-weight: 300;
+.contacts p:first-child {
+  color: #283645;
 }
-.contacts__item p:first-child {
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-.contacts__item p:last-child {
+.contacts p:last-child {
   color: #d22856;
-  font-size: 1.8rem;
-  font-weight: 300;
 }
