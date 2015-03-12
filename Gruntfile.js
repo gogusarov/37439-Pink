@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          'css/style.css': ['less/style.less']
+          'css/style.css': ['./less/style.less']
         }
       }
     },
@@ -27,8 +27,22 @@ module.exports = function(grunt) {
         livereload: true
       },
       style: {
-        files: ['less/*.less'],
-        tasks: ['newer:less']
+        files: ['./less/**/*.less'],
+        tasks: ['less']
+      }
+    },
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+            './css/*.css', 
+            './*.html' 
+          ]
+        },
+        options: {
+          watchTask: true,
+          server: './'
+        }
       }
     },
     concat: {
@@ -51,7 +65,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-newer');
-  
+  grunt.loadNpmTasks('grunt-browser-sync'); 
  
-  //grunt.registerTask('default', ['less', 'watch'])
+  grunt.registerTask('default', ['browserSync', 'watch'])
 };

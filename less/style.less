@@ -1,40 +1,22 @@
 @import 'variables.less';
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: @font-family;
-  font-size: @html-size-base;
-}
-
-a {
-  text-decoration: none; 
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+@import 'components/scaffolding.less';
+@import 'components/type.less';
 
 .center-wrapper {
   width: 280px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .page-header {
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  .clearfix();
+  
   &__logo-link {
     float: left;
   }
 }
 
 .main-nav {
-  //display: none;
   &__toggle {
     float: right;
     cursor: pointer;
@@ -56,36 +38,28 @@ ul {
     bottom: 10px;
   }
   &__appeal {
-    text-align: center;
     padding-top: 40px;
-    font-size: @font-size-big;
   }
   &__list li {
-    text-align: center;
   }
   &__list {
     display: none;
+    list-style: none;
   }
   
 }
 
 .app-download {
-  text-align: center;
-  background: @black;
+  background: @bg-app-download;
   color: white;
-  font-size: @font-size-small;
-  font-weight: @font-weight-light;
   &__links a {
     display: inline-block;
     vertical-align: top;
-    color: white;
   }
 }
 
 .btn {
     display: inline-block;
-    font-size: @font-size-middle;
-    font-weight: @font-weight-bold;
     border: 3px solid white;
     border-radius: 28px;
     padding: 14px 35px;
@@ -94,38 +68,20 @@ ul {
   }
 
 .about-app {
-  text-align: center;
-  
-  &__promo {
-    font-size: @font-size-big;
-    font-weight: @font-weight-light;
-  }
+  background: @bg-about-app;
   &__list {
-    background: @gray;
-  }
-  &__list strong {
-    font-size: @font-size-middle;
-  }
-  &__list p {
-    font-size: @font-size-small;
+    list-style: none;
   }
 }
 
 .slider-comments {
-  text-align: center;
   &__item {
-    blockquote {
-      margin: 0;
-    }
-    cite {
-      font-style: normal;
-      font-weight: @font-weight-bold;
-      font-size: @font-size-middle;
-    }
-    p {
-      font-size: @font-size-small;
-    }
+    margin: 0;
   }
+}
+
+.controls {
+  text-align: center;
 }
 
 .controls__item {
@@ -138,7 +94,7 @@ ul {
     border: 3px solid white;
     &--active {
       background: white;
-      border: 3px solid @deep-blue;
+      border: 3px solid @controls-active-color;
     }
 }
 
@@ -148,52 +104,36 @@ ul {
     border-collapse: collapse;
   }
   &__header {
-    background: @deep-blue;
+    background: @blue;
   }
   th {
     width: 280px;
-    border: 2px solid @gray;
+    border: 2px solid @tariffs-border-color;
   }
   td {
     text-align: left;
-    font-size: @font-size-small;
-    font-weight: @font-weight-light;
     text-transform: uppercase;
-    border: 2px solid @gray;
+    border: 2px solid @tariffs-border-color;
   }
   &__name {
     color: white;
-    font-size: @font-size-middle;
-    font-weigth: @font-weight-bold;
   }
   &__price {
     color: white;
-    font-size: @font-size-big;
-    font-weight: @font-weight-light;
   }
   .controls {
     padding: 40px;
-    text-align: center;
-    background: @gray;
+    background: @bg-tariffs-controls;
   }
 }
 
-.page-footer {
-  text-align: center;
-  &__appeal {
-    font-size: @font-size-big;
-    font-weight: @font-weight-light;
-  }
-}
 
-.contacts__item {
+.contacts {
+  list-style: none;
   p:first-child {
-    font-size: @font-size-middle;
-    font-weight: @font-weight-bold;
+    color: @contacts-head-color;
   }
   p:last-child {
-    color: @pink;
-    font-size: @font-size-middle;
-    font-weight: @font-weight-light;
+    color: @contacts-info-color;
   }
 }
