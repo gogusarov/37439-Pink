@@ -1,6 +1,6 @@
 @import 'variables.less';
 
-html, css {
+html {
   line-height: 1.2;
   font-family: @font-family-site;
   font-size: @html-size-base;
@@ -8,7 +8,12 @@ html, css {
 
 .main-nav {
   &__appeal {
+    padding-top: 40px;
     font-size: @font-size-big;
+  }
+  &__list {
+    display: none;
+    list-style: none;
   }
 }
 
@@ -33,6 +38,23 @@ html, css {
   }
   &__list p {
     font-size: @font-size-small;
+  }
+  &__list {
+    list-style: none;
+  }
+}
+
+.effect {
+  &__promo {
+    font-size: @font-size-huge;
+  }
+  &__text {
+    font-size: @font-size-small;
+  }
+  &__more {
+    font-size: @font-size-small;
+    color: @pink;
+    text-decoration: underline;
   }
 }
 
@@ -69,13 +91,23 @@ html, css {
   }
 }
 
+.contacts {
+  list-style: none;
+}
+
 .contacts__item {
   p:first-child {
+    color: @contacts-head-color;
     font-size: @font-size-middle;
     font-weight: @font-weight-bold;
   }
   p:last-child {
+    color: @contacts-info-color;
     font-size: @font-size-middle;
     font-weight: @font-weight-light;
   }
+}
+
+.copyright {
+  font-size: @font-size-small;
 }

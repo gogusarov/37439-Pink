@@ -1,16 +1,17 @@
 @import 'variables.less';
 @import 'components/scaffolding.less';
+@import 'components/buttons.less';
 @import 'components/type.less';
 
 .center-wrapper {
+  .clearfix();
   width: 280px;
+  position: relative;
   margin: 0 auto;
   text-align: center;
 }
 
 .page-header {
-  .clearfix();
-  
   &__logo-link {
     float: left;
   }
@@ -21,7 +22,7 @@
     float: right;
     cursor: pointer;
   }
-  &__toggle span, &__toggle span:before, &__toggle span:after  {
+  &__toggle span, &__toggle span:before, &__toggle span:after {
     content: '';
     position: absolute;
     display: block;
@@ -30,23 +31,17 @@
     border-radius: 1px;
     background: black;
     cursor: pointer;
+    right: 0;
   }
-  &__toggle span:before {
+  &__toggle span {
     top: 10px;
   }
+  &__toggle span:before {
+    top: -10px;
+  }
   &__toggle span:after {
-    bottom: 10px;
-  }
-  &__appeal {
-    padding-top: 40px;
-  }
-  &__list li {
-  }
-  &__list {
-    display: none;
-    list-style: none;
-  }
-  
+    top: 10px;
+  }  
 }
 
 .app-download {
@@ -58,20 +53,8 @@
   }
 }
 
-.btn {
-    display: inline-block;
-    border: 3px solid white;
-    border-radius: 28px;
-    padding: 14px 35px;
-    margin: 28px 0;
-    cursor: pointer;
-  }
-
 .about-app {
   background: @bg-about-app;
-  &__list {
-    list-style: none;
-  }
 }
 
 .slider-comments {
@@ -124,16 +107,5 @@
   .controls {
     padding: 40px;
     background: @bg-tariffs-controls;
-  }
-}
-
-
-.contacts {
-  list-style: none;
-  p:first-child {
-    color: @contacts-head-color;
-  }
-  p:last-child {
-    color: @contacts-info-color;
   }
 }
