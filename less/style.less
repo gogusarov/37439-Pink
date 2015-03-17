@@ -4,20 +4,58 @@
 @import 'components/type.less';
 
 .center-wrapper {
-  .clearfix();
   width: 280px;
   position: relative;
   margin: 0 auto;
   text-align: center;
+  outline: 2px dashed red;
+}
+
+.center-wrapper {
+  &:before, &:after {
+    display: table;
+    content: '';
+    clear: both;
+  }  
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .center-wrapper {
+    width: 620px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .center-wrapper {
+    width: 940px;
+  }
 }
 
 .page-header {
+  .clearfix();
   &__logo-link {
     float: left;
   }
 }
 
+@media (min-width: 600px) {
+  .page-header {
+    &__appeal {
+      float: left;
+    }
+  }
+  
+  .col--left {
+    float: left;
+  }
+  
+  .col--right {
+    float: right;
+  }
+}
+
 .main-nav {
+  .clearfix();
   &__toggle {
     float: right;
     cursor: pointer;
@@ -53,13 +91,72 @@
   }
 }
 
+@media (min-width: 600px) and (max-width: 1200px) {
+  
+}
+
 .about-app {
   background: @bg-about-app;
 }
 
-.slider-comments {
-  &__item {
-    margin: 0;
+@media (min-width: 600px) and (max-width: 1200px) {
+  .about-app {
+    background: @bg-about-app;
+    &__list {
+      text-align: left;
+      width: 310px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-app {
+    .col--right {
+      float: none;
+    }
+    &__list {
+      display: flex;
+    }
+    &__item {
+      flex-flow: 1;
+    }
+  }
+}
+
+.effect {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .effect {
+    display: block;
+    .center-wrapper {
+      text-align: left;
+    }
+  }
+}
+
+.comment {
+  margin: 0;
+  &__about-author {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .comment {
+    display: flex;
+    flex-direction: column;
+    &__about-author {
+      display: block;
+      order: 3
+    }
+    &__text {
+      order: 1;
+    }
+    &__author {
+     order: 2;
+    }
   }
 }
 
@@ -107,5 +204,38 @@
   .controls {
     padding: 40px;
     background: @bg-tariffs-controls;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .contacts {
+    &__item {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &__item:first-of-type {
+      margin-right: 140px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts {
+    &__list {
+      display: flex;
+      flex-direction: row;
+    }
+    &__item {
+      flex-grow: 1;
+    }
+    &__item:first-of-type {
+      order: 1;
+    }
+    &__item:last-of-type {
+      order: 2;
+    }
+    &__item:nth-of-type(2) {
+      order: 3;
+    }
   }
 }

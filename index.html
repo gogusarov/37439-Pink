@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
@@ -13,25 +13,27 @@
       <a href="" class="page-header__logo-link"><img src="logo.png" alt="PINK"></a>
       <nav class="main-nav">
         <a class="main-nav__toggle" href=""><span></span></a>
-        <div class="main-nav__appeal">Взгляните на жизнь иначе!</div>
         <ul class="main-nav__list">
-          <li><a href="">Информация</a></li>
-          <li><a href="">Возможности</a></li>
-          <li><a href="">Отзывы</a></li>
-          <li><a href="">Стоимость</a></li>
+          <li class="main-nav__item"><a href="">Информация</a></li>
+          <li class="main-nav__item"><a href="">Возможности</a></li>
+          <li class="main-nav__item"><a href="">Отзывы</a></li>
+          <li class="main-nav__item"><a href="">Стоимость</a></li>
         </ul>
       </nav>
+      <div class="page-header__appeal">Взгляните на жизнь иначе!</div>
     </div>
     
     <div class="app-download">
       <div class="center-wrapper">
-        <a class="btn">Скачать приложение</a>
-        <div class="app-download__links">
-          <a href=""><img src="ios.png" alt="Apple"></a>
-          <a href=""><img src="android.png" alt="Android"></a>
-          <a href=""><img src="windows-phone.png" alt="Windows"></a>
+        <div class="col--left">
+          <a class="btn">Скачать приложение</a>
+          <div class="app-download__links">
+            <a href="" class="app-download__link"><img src="ios.png" alt="Apple"></a>
+            <a href="" class="app-download__link"><img src="android.png" alt="Android"></a>
+            <a href="" class="app-download__link"><img src="windows-phone.png" alt="Windows"></a>
+          </div>
+          <p class="app-download__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
         </div>
-        <p class="app-download__description">Доступно для iPhone, iPad, Android, Windows Phone, Mac OS, Windows 8</p>
       </div>
     </div>
   </header>
@@ -40,63 +42,71 @@
   
   <main>    
     <div class="promo">
-      <div class="center-wrapper">
-        <p class="promo__item">Устали от серости мегаполиса?</p>
-        <p class="promo__item">Нам есть, что вам предложить!</p>
+      <div class="col">
+        <div class="center-wrapper">
+          <h1 class="promo__item">Устали от серости мегаполиса?</h1>
+          <h1 class="promo__item">Нам есть, что вам<br> предложить!</h1>
+        </div>
       </div>
     </div>
     
-    <div class=about-app>  
+    <div class="about-app">  
       <div class="center-wrapper">
-        <ul class="about-app__list">
-          <li>
-            <strong>Поднимает настроение</strong>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
-          </li>
-          <li>
-            <strong>Меняет мир вокруг</strong>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li>
-            <strong>Заводит новых друзей</strong>
-            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-        <img class="about-app__screenshot" src="app-screenshot.png" alt="">
+        <div class="col--right">
+          <ul class="about-app__list">
+            <li class="about-app__item">
+              <strong>Поднимает настроение</strong>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
+            </li>
+            <li class="about-app__item">
+              <strong>Меняет мир вокруг</strong>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="about-app__item">
+              <strong>Заводит новых друзей</strong>
+              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col--left"><img class="about-app__screenshot" src="app-screenshot.png" alt="">
+        </div>
       </div>
     </div>
     
     <div class="effect">
       <div class="center-wrapper">
-        <strong class="effect__promo">Эффект на 24 часа!</strong>
-        <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-        <a href="" class="effect__more">Узнать больше об исследовании</a>
-        <img src="24hours.jpg" alt="" class="effect__picture">
+        <div class="col--right">
+          <h2 class="effect__promo">Эффект на 24 часа!</h2>
+          <p class="effect__text">Британские ученые провели исследования<br> и доказали, что положительный эффект<br> от использования приложения длится<br> целые сутки!</p>
+          <a href="" class="effect__more">Узнать больше об исследовании</a>
+        </div>
       </div>
     </div>
     
     <section class="comments">
       <div class="center-wrapper">
-        <div class="slider-comments">
-          <blockquote class="slider-comments__item">
-            <cite>Николай Петров</cite>
-            <p>25 лет, водитель трамвая</p>
-            <p>&laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;</p>
-          </blockquote>
-          <blockquote class="slider-comments__item">
-            <cite>Петр Николаев</cite>
-            <p>52 года, пешеход</p>
-            <p>&laquo;Не верьте ничему из того, что сказал Николай Петров!&raquo;</p>
-          </blockquote>
-          <blockquote class="slider-comments__item">
-            <cite>Anonymous</cite>
-            <p>не пойми кто</p>
-            <p>&laquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.&raquo;</p>
-          </blockquote>
-          <div class="controls">
-            <a class="controls__item controls__item--active" href=""></a>
-            <a class="controls__item" href=""></a>
-            <a class="controls__item" href=""></a>
+       <div class="col">
+          <div class="slider-comments">
+            <blockquote class="comment">
+              <cite class="comment__author">Николай Петров</cite>
+              <p class="comment__about-author">25 лет, водитель трамвая</p>
+              <p class="comment__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="comment">
+              <cite class="comment__author">Петр Николаев</cite>
+              <p class="comment__about-author">52 года, пешеход</p>
+              <p class="comment__text">Не верьте ничему из того, что сказал Николай Петров!</p>
+            </blockquote>
+            <blockquote class="comment">
+              <cite class="comment__author">Anonymous</cite>
+              <p class="comment__about-author">не пойми кто</p>
+              <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
+            </blockquote>
+            <div class="controls">
+              <a class="controls__item controls__item--active" href=""></a>
+              <a class="controls__item" href=""></a>
+              <a class="controls__item" href=""></a>
+            </div>
           </div>
         </div>
       </div>
@@ -104,20 +114,22 @@
     
     <section class="tariffs">
       <table class="tariffs__features">
-        <tr class="tariffs__header">
-          <th>
-            <p class="tariffs__name">База</p>
-            <p class="tariffs__price">1,99 USD</p>
-          </th>
-          <th>
-            <p class="tariffs__name">Стандарт</p>
-            <p class="tariffs__price">3,99 USD</p>
-          </th>
-          <th>
-            <p class="tariffs__name">Анлим</p>
-            <p class="tariffs__price">9,99 USD</p>
-          </th>
-        </tr>
+        <thead>
+          <tr class="tariffs__header">
+            <th>
+              <p class="tariffs__name">База</p>
+              <p class="tariffs__price">1,99 USD</p>
+            </th>
+            <th>
+              <p class="tariffs__name">Стандарт</p>
+              <p class="tariffs__price">3,99 USD</p>
+            </th>
+            <th>
+              <p class="tariffs__name">Анлим</p>
+              <p class="tariffs__price">9,99 USD</p>
+            </th>
+          </tr>
+        </thead>
         <tr>
           <td>Розовый фильтр</td>
           <td>Розовый фильтр</td>
@@ -145,38 +157,50 @@
   
   
   <footer class="page-footer">
-    <div class="center-wrapper">
-      <p class="page-footer__appeal">Остались вопросы? Свяжитесь с нами!</p>
-      <ul class="contacts">
-        <li class="contacts__item">
-          <p>Звоните:</p>
-          <p>8 (800) 1000 900</p>
-        </li>
-        <li class="contacts__item">
-          <p>Пишите:</p>
-          <p>hello@pinkapp.ru</p>
-        </li>
-        <li class="contacts__item">
-          <p>Приезжайте в гости:</p>
-          <p>Санкт-Петербург, Невский проспект, д. 20</p>
-        </li>
-      </ul>
+    <div class="contacts">
+      <div class="center-wrapper">
+        <p class="contacts__appeal">Остались вопросы?<br> Свяжитесь с нами!</p>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <p class="contacts__item-name">Звоните:</p>
+            <p class="contacts__item-address">8 (800) 1000 900</p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__item-name">Пишите:</p>
+            <p class="contacts__item-address">hello@pinkapp.ru</p>
+          </li>
+          <li class="contacts__item">
+            <p class="contacts__item-name">Приезжайте в гости:</p>
+            <p class="contacts__item-address">Санкт-Петербург,<br> Невский проспект, д. 20</p>
+          </li>
+        </ul>
+      </div>
     </div>
     
-    <div class="page-footer__map"></div>
+    <div class="map">
+      
+    </div>
     
-    <div class="center-wrapper">
-      <a href="" class="page-footer__logo"><img src="logo-footer.jpg" alt="PINK" ></a>
-      <div class="social">
-        <a href="" class="social__item social__item--tw"></a>
-        <a href="" class="social__item social__item--fb"></a>
-        <a href="" class="social__item social__item--hz"></a>
-      </div>
-      <div class="copyright">
-        <span>Website by</span>
-        <a href="glukhanko"></a>
-        <span>for</span>
-        <a href="htmlacademy"></a>
+    <div class="links">
+      <div class="center-wrapper">
+        <a href="" class="links__logo"><img src="logo-footer.jpg" alt="PINK" ></a>
+        <div class="social">
+          <a href="" class="social__item social__item--tw"></a>
+          <a href="" class="social__item social__item--fb"></a>
+          <a href="" class="social__item social__item--hz"></a>
+        </div>
+        <div class="copyright">
+          <p>
+            Website by 
+            <a href="glukhanko">
+              <img src="glukhanko.jpg" alt="">
+            </a>
+            for
+            <a href="htmlacademy">
+              <img src="academy.jpg" alt="">
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </footer>

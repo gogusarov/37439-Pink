@@ -6,11 +6,14 @@ html {
   font-size: @html-size-base;
 }
 
-.main-nav {
+.page-header {
   &__appeal {
     padding-top: 40px;
     font-size: @font-size-big;
   }
+}
+
+.main-nav {
   &__list {
     display: none;
     list-style: none;
@@ -28,9 +31,20 @@ html {
 }
 
 .promo {
-  font-size: @font-size-big;
-  font-weight: @font-weight-light;
+  &__item {
+    font-size: @font-size-big;
+    font-weight: @font-weight-light;
+  }
 }
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .promo {
+    &__item {
+      font-size: @font-size-big-tablet;
+    }
+  } 
+}
+
 
 .about-app {
   &__list strong {
@@ -58,8 +72,8 @@ html {
   }
 }
 
-.slider-comments {
-  cite {
+.comment {
+  &__author {
     font-style: normal;
     font-weight: @font-weight-bold;
     font-size: @font-size-middle;
@@ -67,6 +81,10 @@ html {
   p {
     font-size: @font-size-small;
   }
+  &:not(:first-of-type) {
+    display: none;
+  }
+  
 }
 
 .tariffs {
@@ -84,14 +102,22 @@ html {
   }
 }
 
-.page-footer {
+.contacts {
   &__appeal {
     font-size: @font-size-big;
     font-weight: @font-weight-light;
   }
 }
 
-.contacts {
+@media (min-width: 600px) {
+  .contacts {
+    &__appeal {
+      font-size: @font-size-big-tablet;
+    }
+  }
+}
+
+.contacts__list {
   list-style: none;
 }
 
@@ -103,7 +129,7 @@ html {
   }
   p:last-child {
     color: @contacts-info-color;
-    font-size: @font-size-middle;
+    font-size: @font-size-big;
     font-weight: @font-weight-light;
   }
 }
