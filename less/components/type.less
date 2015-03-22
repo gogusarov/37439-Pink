@@ -1,20 +1,26 @@
 @import 'variables.less';
 
-html, css {
+html {
   line-height: 1.2;
   font-family: @font-family-site;
   font-size: @html-size-base;
 }
 
+
 .main-nav {
-  &__appeal {
-    font-size: @font-size-big;
+  &__list {
+    display: none;
+    list-style: none;
   }
 }
 
 .app-download {
   font-size: @font-size-small;
   font-weight: @font-weight-light;
+  &__appeal {
+    padding-top: 40px;
+    font-size: @font-size-big;
+  }
 }
 
 .btn {
@@ -23,9 +29,16 @@ html, css {
 }
 
 .promo {
-  font-size: @font-size-big;
-  font-weight: @font-weight-light;
+  &__item {
+    font-size: @font-size-big;
+    font-weight: @font-weight-light;
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      font-size: @font-size-big-tablet;
+    }
+  }
 }
+
+
 
 .about-app {
   &__list strong {
@@ -34,10 +47,27 @@ html, css {
   &__list p {
     font-size: @font-size-small;
   }
+  &__list {
+    list-style: none;
+  }
 }
 
-.slider-comments {
-  cite {
+.effect {
+  &__promo {
+    font-size: @font-size-huge;
+  }
+  &__text {
+    font-size: @font-size-small;
+  }
+  &__more {
+    font-size: @font-size-small;
+    color: @pink;
+    text-decoration: underline;
+  }
+}
+
+.comment {
+  &__author {
     font-style: normal;
     font-weight: @font-weight-bold;
     font-size: @font-size-middle;
@@ -45,6 +75,10 @@ html, css {
   p {
     font-size: @font-size-small;
   }
+  &:not(:first-of-type) {
+    display: none;
+  }
+  
 }
 
 .tariffs {
@@ -62,20 +96,34 @@ html, css {
   }
 }
 
-.page-footer {
+.contacts {
   &__appeal {
+    font-size: @font-size-big;
+    font-weight: @font-weight-light;
+    @media (min-width: @mobile-breakpoint) {
+      font-size: @font-size-big-tablet;
+    }
+  }
+}
+
+
+.contacts__list {
+  list-style: none;
+}
+
+.contacts__item {
+  p:first-child {
+    color: @contacts-head-color;
+    font-size: @font-size-middle;
+    font-weight: @font-weight-bold;
+  }
+  p:last-child {
+    color: @contacts-info-color;
     font-size: @font-size-big;
     font-weight: @font-weight-light;
   }
 }
 
-.contacts__item {
-  p:first-child {
-    font-size: @font-size-middle;
-    font-weight: @font-weight-bold;
-  }
-  p:last-child {
-    font-size: @font-size-middle;
-    font-weight: @font-weight-light;
-  }
+.copyright {
+  font-size: @font-size-small;
 }
