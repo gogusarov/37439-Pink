@@ -6,31 +6,44 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
 </head>
 <body>
   <header class="page-header">
-    <div class="center-wrapper">
-      <a href="" class="page-header__logo-link"><img src="logo.png" alt="PINK"></a>
-      <nav class="main-nav">
-        <a class="main-nav__toggle" href=""><span></span></a>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="">Информация</a></li>
-          <li class="main-nav__item"><a href="">Возможности</a></li>
-          <li class="main-nav__item"><a href="">Отзывы</a></li>
-          <li class="main-nav__item"><a href="">Стоимость</a></li>
-        </ul>
-      </nav>
-      <div class="page-header__appeal">Взгляните на жизнь иначе!</div>
+   
+    <div class="nav">
+      <div class="center-wrapper">
+        <picture class="page-header__logo">
+          <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-3@2x.png">
+          <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-3@1x.png">
+          <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-2@2x.png">
+          <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-2@1x.png">
+          <img src="img/Pink-logo-1.png" alt="Pink">
+        </picture>
+        <nav class="main-nav">
+          <a class="main-nav__toggle" href=""><span></span></a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="">Информация</a></li>
+            <li class="main-nav__item"><a href="">Возможности</a></li>
+            <li class="main-nav__item"><a href="">Отзывы</a></li>
+            <li class="main-nav__item"><a href="">Стоимость</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     
     <div class="app-download">
       <div class="center-wrapper">
         <div class="col--left">
+          <div class="app-download__appeal">Взгляните на жизнь иначе!</div>
           <a class="btn">Скачать приложение</a>
           <div class="app-download__links">
-            <a href="" class="app-download__link"><img src="ios.png" alt="Apple"></a>
-            <a href="" class="app-download__link"><img src="android.png" alt="Android"></a>
-            <a href="" class="app-download__link"><img src="windows-phone.png" alt="Windows"></a>
+            <a href="" class="app-download__link"><img src="img/apple-logo.svg" alt="Apple"></a>
+            <a href="" class="app-download__link"><img src="img/android-logo.svg" alt="Android"></a>
+            <a href="" class="app-download__link"><img src="img/microsoft-logo.svg" alt="Windows"></a>
           </div>
           <p class="app-download__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
         </div>
@@ -42,42 +55,44 @@
   
   <main>    
     <div class="promo">
-      <div class="col">
-        <div class="center-wrapper">
-          <h1 class="promo__item">Устали от серости мегаполиса?</h1>
-          <h1 class="promo__item">Нам есть, что вам<br> предложить!</h1>
-        </div>
+      <div class="center-wrapper">
+        <h1 class="promo__item">Устали от серости мегаполиса?<br>Нам есть, что вам<br> предложить!</h1>
       </div>
     </div>
     
     <div class="about-app">  
       <div class="center-wrapper">
-        <div class="col--right">
-          <ul class="about-app__list">
-            <li class="about-app__item">
-              <strong>Поднимает настроение</strong>
-              <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
-            </li>
-            <li class="about-app__item">
-              <strong>Меняет мир вокруг</strong>
-              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            </li>
-            <li class="about-app__item">
-              <strong>Заводит новых друзей</strong>
-              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-            </li>
-          </ul>
+        <div class="about-app__screenshots">
+          <img src="img/iphone-screen-3-1@1x.png" srcset="img/iphone-screen-3-1@2x.png" alt="Первый скрин">
+          <img src="img/iphone-screen-3-2@1x.png" srcset="img/iphone-screen-3-2@2x.png" alt="Второй скрин">
+          <img src="img/iphone-screen-3-3@1x.png" srcset="img/iphone-screen-3-3@2x.png" alt="Третий скрин">
+          <img src="img/iphone-screen-2-3@1x.png" alt="img/iphone-screen-2-3@2x.png">
         </div>
-        <div class="col--left"><img class="about-app__screenshot" src="app-screenshot.png" alt="">
-        </div>
+        <ul class="about-app__list">
+          <li class="about-app__item">
+            <strong>Поднимает настроение</strong>
+            <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
+          </li>
+          <li class="about-app__item">
+            <strong>Меняет мир вокруг</strong>
+            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </li>
+          <li class="about-app__item">
+            <strong>Заводит новых друзей</strong>
+            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+          </li>
+        </ul>
       </div>
     </div>
     
     <div class="effect">
       <div class="center-wrapper">
-        <div class="col--right">
+        <div class="effect__timer">
+          <img src="img/timer-2.svg" alt="">
+        </div>
+        <div class="effect__wrapper">
           <h2 class="effect__promo">Эффект на 24 часа!</h2>
-          <p class="effect__text">Британские ученые провели исследования<br> и доказали, что положительный эффект<br> от использования приложения длится<br> целые сутки!</p>
+          <p class="effect__text">Британские ученые провели исследованияи доказали, что положительный эффект от использования приложения длитсяцелые сутки!</p>
           <a href="" class="effect__more">Узнать больше об исследовании</a>
         </div>
       </div>
@@ -85,28 +100,29 @@
     
     <section class="comments">
       <div class="center-wrapper">
-       <div class="col">
-          <div class="slider-comments">
-            <blockquote class="comment">
-              <cite class="comment__author">Николай Петров</cite>
-              <p class="comment__about-author">25 лет, водитель трамвая</p>
-              <p class="comment__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-            </blockquote>
-            <blockquote class="comment">
-              <cite class="comment__author">Петр Николаев</cite>
-              <p class="comment__about-author">52 года, пешеход</p>
-              <p class="comment__text">Не верьте ничему из того, что сказал Николай Петров!</p>
-            </blockquote>
-            <blockquote class="comment">
-              <cite class="comment__author">Anonymous</cite>
-              <p class="comment__about-author">не пойми кто</p>
-              <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
-            </blockquote>
-            <div class="controls">
-              <a class="controls__item controls__item--active" href=""></a>
-              <a class="controls__item" href=""></a>
-              <a class="controls__item" href=""></a>
-            </div>
+        <div class="slider-comments">
+          <blockquote class="comment">
+            <p class="comment__about-author">
+              <cite class="comment__author">Николай Петров</cite><span>25 лет, водитель трамвая</span>
+            </p>
+            <p class="comment__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+          </blockquote>
+          <blockquote class="comment">
+            <p class="comment__about-author">
+              <cite class="comment__author">Петр Николаев</cite> <span>52 года, пешеход</span>
+            </p>
+            <p class="comment__text">Не верьте ничему из того, что сказал Николай Петров!</p>
+          </blockquote>
+          <blockquote class="comment">
+            <p class="comment__about-author">
+              <cite class="comment__author">Anonymous</cite><span>не пойми кто</span>
+            </p>
+            <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
+          </blockquote>
+          <div class="controls">
+            <a class="controls__item controls__item--active" href=""></a>
+            <a class="controls__item" href=""></a>
+            <a class="controls__item" href=""></a>
           </div>
         </div>
       </div>
@@ -114,8 +130,11 @@
     
     <section class="tariffs">
       <table class="tariffs__features">
-        <thead>
+        <thead class="tariffs__row-header">
           <tr class="tariffs__header">
+            <th>
+              
+            </th>
             <th>
               <p class="tariffs__name">База</p>
               <p class="tariffs__price">1,99 USD</p>
@@ -183,21 +202,27 @@
     
     <div class="links">
       <div class="center-wrapper">
-        <a href="" class="links__logo"><img src="logo-footer.jpg" alt="PINK" ></a>
+        <picture class="links-logo">
+          <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@2x.png">
+          <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@1x.png">
+          <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@2x.png">
+          <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@1x.png">
+          <img src="img/Pink-logo-footer-2@1x.png" srcset="img/Pink-logo-footer-2@2x.png 2x">
+        </picture>
         <div class="social">
-          <a href="" class="social__item social__item--tw"></a>
-          <a href="" class="social__item social__item--fb"></a>
-          <a href="" class="social__item social__item--hz"></a>
+          <a href="" class="social__item social__item--tw"><img src="img/twitter.svg" alt=""></a>
+          <a href="" class="social__item social__item--fb"><img src="img/facebook.svg" alt=""></a>
+          <a href="" class="social__item social__item--yt"><img src="img/youtube.svg" alt=""></a>
         </div>
         <div class="copyright">
           <p>
             Website by 
             <a href="glukhanko">
-              <img src="glukhanko.jpg" alt="">
+              <img src="img/glukhanko.svg" alt="">
             </a>
             for
             <a href="htmlacademy">
-              <img src="academy.jpg" alt="">
+              <img src="img/htmlacademy.svg" alt="">
             </a>
           </p>
         </div>

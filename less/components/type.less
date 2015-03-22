@@ -6,12 +6,6 @@ html {
   font-size: @html-size-base;
 }
 
-.page-header {
-  &__appeal {
-    padding-top: 40px;
-    font-size: @font-size-big;
-  }
-}
 
 .main-nav {
   &__list {
@@ -23,6 +17,10 @@ html {
 .app-download {
   font-size: @font-size-small;
   font-weight: @font-weight-light;
+  &__appeal {
+    padding-top: 40px;
+    font-size: @font-size-big;
+  }
 }
 
 .btn {
@@ -34,16 +32,12 @@ html {
   &__item {
     font-size: @font-size-big;
     font-weight: @font-weight-light;
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      font-size: @font-size-big-tablet;
+    }
   }
 }
 
-@media (min-width: 600px) and (max-width: 1200px) {
-  .promo {
-    &__item {
-      font-size: @font-size-big-tablet;
-    }
-  } 
-}
 
 
 .about-app {
@@ -106,16 +100,12 @@ html {
   &__appeal {
     font-size: @font-size-big;
     font-weight: @font-weight-light;
-  }
-}
-
-@media (min-width: 600px) {
-  .contacts {
-    &__appeal {
+    @media (min-width: @mobile-breakpoint) {
       font-size: @font-size-big-tablet;
     }
   }
 }
+
 
 .contacts__list {
   list-style: none;

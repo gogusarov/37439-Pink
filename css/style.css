@@ -4,7 +4,7 @@ body {
   padding: 0;
 }
 a {
-  color: #f2f2f2;
+  color: white;
   text-decoration: none;
 }
 ul {
@@ -19,14 +19,14 @@ ul {
   margin: 28px 0;
   cursor: pointer;
 }
+.btn:hover {
+  color: gold;
+  border-color: gold;
+}
 html {
   line-height: 1.2;
   font-family: 'Open Sans', 'Verdana', 'Terminal', sans-serif;
   font-size: 10px;
-}
-.page-header__appeal {
-  padding-top: 40px;
-  font-size: 2.4rem;
 }
 .main-nav__list {
   display: none;
@@ -35,6 +35,10 @@ html {
 .app-download {
   font-size: 1.4rem;
   font-weight: 300;
+}
+.app-download__appeal {
+  padding-top: 40px;
+  font-size: 2.4rem;
 }
 .btn {
   font-size: 1.8rem;
@@ -145,13 +149,15 @@ html {
   display: block;
   clear: both;
 }
-.page-header__logo-link {
+.page-header__logo {
   float: left;
 }
-@media (min-width: 600px) {
-  .page-header__appeal {
-    float: left;
+@media (min-width: 1200px) {
+  .page-header {
+    background: url("../img/background-fullsize.jpg") no-repeat 50% 50%;
   }
+}
+@media (min-width: 600px) {
   .col--left {
     float: left;
   }
@@ -196,10 +202,60 @@ html {
 }
 .app-download__links a {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: baseline;
+}
+@media (min-width: 1200px) {
+  .app-download {
+    background: none;
+  }
 }
 .about-app {
   background: #f2f2f2;
+}
+.about-app .center-wrapper,
+.about-app__list {
+  display: flex;
+  flex-direction: column;
+}
+.about-app__list {
+  order: 1;
+}
+.about-app__screenshots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  order: 2;
+}
+.about-app__screenshots img:not(:last-child) {
+  display: none;
+}
+.about-app__screenshots img {
+  width: 160px;
+}
+@media (min-width: 1200px) {
+  .about-app .center-wrapper {
+    flex-direction: column;
+  }
+  .about-app__screenshots,
+  .about-app__list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .about-app__screenshots {
+    order: 1;
+  }
+  .about-app__screenshots img:not(:last-child) {
+    display: block;
+  }
+  .about-app__screenshots img:last-child {
+    display: none;
+  }
+  .about-app__screenshots img {
+    width: 190px;
+  }
+  .about-app__list {
+    order: 2;
+  }
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   .about-app {
@@ -207,35 +263,64 @@ html {
   }
   .about-app__list {
     text-align: left;
-    width: 310px;
+    flex-direction: column;
+    flex-grow: 1;
+    order: 2;
   }
-}
-@media (min-width: 1200px) {
-  .about-app .col--right {
-    float: none;
+  .about-app .center-wrapper {
+    flex-direction: row;
   }
-  .about-app__list {
-    display: flex;
+  .about-app__screenshots {
+    flex-grow: 1;
+    flex-basis: 300px;
+    order: 1;
   }
-  .about-app__item {
-    flex-flow: 1;
+  .about-app__screenshots img:not(:last-child) {
+    display: none;
+  }
+  .about-app__screenshots img:last-child {
+    display: block;
+  }
+  .about-app__screenshots img {
+    width: 292px;
   }
 }
 .effect {
   display: none;
 }
-@media (min-width: 600px) {
+.effect .center-wrapper {
+  display: flex;
+}
+.effect__wrapper {
+  margin-left: 40px;
+  text-align: left;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
   .effect {
     display: block;
   }
-  .effect .center-wrapper {
-    text-align: left;
+  .effect__timer {
+    flex-grow: 1;
+  }
+  .effect__wrapper {
+    flex-grow: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .effect {
+    display: block;
+  }
+  .effect__timer {
+    flex-grow: 1;
+  }
+  .effect__wrapper {
+    flex-grow: 2;
   }
 }
 .comment {
   margin: 0;
 }
-.comment__about-author {
+.comment__about-author span {
   display: none;
 }
 @media (min-width: 600px) {
@@ -244,14 +329,13 @@ html {
     flex-direction: column;
   }
   .comment__about-author {
+    order: 2;
+  }
+  .comment__about-author span {
     display: block;
-    order: 3;
   }
   .comment__text {
     order: 1;
-  }
-  .comment__author {
-    order: 2;
   }
 }
 .controls {
@@ -282,6 +366,7 @@ html {
   border: 2px solid #e5e5e5;
 }
 .tariffs td {
+  width: 280px;
   text-align: left;
   text-transform: uppercase;
   border: 2px solid #e5e5e5;
@@ -322,4 +407,25 @@ html {
   .contacts__item:nth-of-type(2) {
     order: 3;
   }
+}
+.links {
+  display: none;
+}
+@media (min-width: 600px) {
+  .links {
+    display: block;
+  }
+}
+.links .center-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.copyright a {
+  display: inline-block;
+  vertical-align: middle;
 }
