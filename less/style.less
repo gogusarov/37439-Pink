@@ -2,9 +2,10 @@
 @import 'components/scaffolding.less';
 @import 'components/buttons.less';
 @import 'components/type.less';
+@import 'components/page-header.less';
+@import 'components/page-footer.less';
 
-.center-wrapper {
-  width: 280px;
+.center-wrapper {  
   position: relative;
   margin: 0 auto;
   text-align: center;
@@ -26,17 +27,6 @@
 }
 
 
-.page-header {
-  .clearfix();
-  &__logo {
-    float: left;
-  }
-  
-  @media (min-width: @tablet-breakpoint) {
-    background: url("../img/background-fullsize.jpg") no-repeat 50% 50%;
-//    background-size: 100%;
-  }
-}
 
 @media (min-width: @mobile-breakpoint) {
 
@@ -49,86 +39,46 @@
   }
 }
 
-.main-nav {
-  .clearfix();
-  &__toggle {
-    float: right;
-    cursor: pointer;
-  }
-  &__toggle span, &__toggle span:before, &__toggle span:after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 4px;
-    border-radius: 1px;
-    background: black;
-    cursor: pointer;
-    right: 0;
-  }
-  &__toggle span {
-    top: 10px;
-  }
-  &__toggle span:before {
-    top: -10px;
-  }
-  &__toggle span:after {
-    top: 10px;
-  }  
-}
 
-.app-download {
-  background: @bg-app-download;
-  color: white;
-  &__links a {
-    display: inline-block;
-    vertical-align: baseline;
-  }
-  @media (min-width: @tablet-breakpoint) {
-    background: none;
-  }
-}
 
 .about-app {
   background: @bg-about-app;
   
-  .center-wrapper, &__list {
+  &__wrapper, &__list {
     display: flex;
     flex-direction: column;
   }
   &__list {
     order: 1;
   }
-  &__screenshots {
+  .screenshots {
     display: flex;
-    img:not(:last-child) {
+    &__item:not(:last-child) {
       display: none;
     }
-    img {
-      width: 160px;
-    }
+   
     flex-direction: row;
     justify-content: center;
     order: 2;
   }
   
   @media (min-width: @tablet-breakpoint) {
-    .center-wrapper {
+    &__wrapper {
       flex-direction: column;
     }
-    &__screenshots, &__list {
+    .screenshots, &__list {
       flex-direction: row;
       justify-content: space-around;
     }
-    &__screenshots {
-      img:not(:last-child) {
-        display: block
+    .screenshots {
+      &__item:not(:last-child) {
+        display: block;
+        img {
+          width: 292px
+        }
       }
-      img:last-child {
+      &__item:last-child {
         display: none;
-      }
-      img {
-        width: 190px;
       }
       order: 1;
     }
@@ -145,21 +95,18 @@
       flex-grow: 1;
       order: 2;
     }
-    .center-wrapper {
+    &__wrapper {
       flex-direction: row;
     }
-    &__screenshots {
+    .screenshots {
       flex-grow: 1;
       flex-basis: 300px;
       order: 1;
-      img:not(:last-child) {
+      &__item:not(:last-child) {
         display: none;
       }
-      img:last-child {
+      &__item:last-child {
         display: block;
-      }
-      img {
-        width: 292px;
       }
     }
   }
@@ -168,20 +115,20 @@
 
 .effect {
   display: none;
-  .center-wrapper{
+  &__wrapper{
     display: flex;
+    flex-direction: row;
   }
-  &__wrapper {
+  &__text-wrapper {
     margin-left: 40px;
     text-align: left;
   }
-  
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
     display: block;
     &__timer {
       flex-grow: 1;
     } 
-    &__wrapper {
+    &__text-wrapper {
       flex-grow: 1;
     }
   }
@@ -191,7 +138,7 @@
     &__timer {
       flex-grow: 1;
     } 
-    &__wrapper {
+    &__text-wrapper {
       flex-grow: 2;
     }
   }
@@ -216,6 +163,11 @@
     }
     &__text {
       order: 1;
+    }
+  }
+  @media (min-width: @tablet-breakpoint) {
+    &__text {
+      padding: 0 80px;
     }
   }
 }
@@ -269,59 +221,3 @@
   }
 }
 
-.contacts {
-  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
-    &__item {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    &__item:first-of-type {
-      margin-right: 140px;
-    }
-  }
-  
-  @media (min-width: @tablet-breakpoint) {
-    &__list {
-      display: flex;
-      flex-direction: row;
-    }
-    &__item {
-      flex-grow: 1;
-    }
-    &__item:first-of-type {
-      order: 1;
-    }
-    &__item:last-of-type {
-      order: 2;
-    }
-    &__item:nth-of-type(2) {
-      order: 3;
-    }
-  } 
-}
-
-.links {
-  display: none;
-  @media (min-width: @mobile-breakpoint) {
-    display: block;
-  }
-  .center-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-  }
-}
-
-.social {
-  a {
-    display: inline-block;
-    vertical-align: middle;
-  }
-}
-
-.copyright {
-  a {
-    display: inline-block;
-    vertical-align: middle;
-  }
-}

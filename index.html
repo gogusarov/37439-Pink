@@ -13,18 +13,19 @@
 </head>
 <body>
   <header class="page-header">
-   
     <div class="nav">
       <div class="center-wrapper">
-        <picture class="page-header__logo">
-          <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-3@2x.png">
-          <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-3@1x.png">
-          <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-2@2x.png">
-          <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-2@1x.png">
-          <img src="img/Pink-logo-1.png" alt="Pink">
-        </picture>
+        <div class="header-logo-wrapper">
+          <picture class="page-header__logo">
+            <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-3@2x.png">
+            <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-3@1x.png">
+            <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-2@2x.png">
+            <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-2@1x.png">
+            <img src="img/Pink-logo-1.png" alt="Pink">
+          </picture>
+        </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle" href=""><span></span></a>
+          <a class="main-nav__toggle" href=""><img src="img/menu-burger.svg" alt=""></a>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="">Информация</a></li>
             <li class="main-nav__item"><a href="">Возможности</a></li>
@@ -39,6 +40,7 @@
       <div class="center-wrapper">
         <div class="col--left">
           <div class="app-download__appeal">Взгляните на жизнь иначе!</div>
+          <figure class="hand-with-phone"><img src="" alt=""></figure>
           <a class="btn">Скачать приложение</a>
           <div class="app-download__links">
             <a href="" class="app-download__link"><img src="img/apple-logo.svg" alt="Apple"></a>
@@ -62,38 +64,53 @@
     
     <div class="about-app">  
       <div class="center-wrapper">
-        <div class="about-app__screenshots">
-          <img src="img/iphone-screen-3-1@1x.png" srcset="img/iphone-screen-3-1@2x.png" alt="Первый скрин">
-          <img src="img/iphone-screen-3-2@1x.png" srcset="img/iphone-screen-3-2@2x.png" alt="Второй скрин">
-          <img src="img/iphone-screen-3-3@1x.png" srcset="img/iphone-screen-3-3@2x.png" alt="Третий скрин">
-          <img src="img/iphone-screen-2-3@1x.png" alt="img/iphone-screen-2-3@2x.png">
+        <div class="about-app__wrapper">
+          <div class="screenshots">
+            <div class="screenshots__item">
+              <img src="img/iphone-screen-3-1@1x.png"
+              srcset="img/iphone-screen-3-1@2x.png 2x" alt="Первый скрин">
+            </div>
+            <div class="screenshots__item">
+              <img src="img/iphone-screen-3-2@1x.png"
+              srcset="img/iphone-screen-3-2@2x.png 2x"  alt="Второй скрин">
+            </div>
+            <div class="screenshots__item">
+              <img src="img/iphone-screen-3-3@1x.png"
+              srcset="img/iphone-screen-3-3@2x.png 2x" alt="Третий скрин">
+            </div>
+            <div class="screenshots__item">
+              <img src="img/iphone-screen-2-3@1x.png" alt="">
+            </div>
+          </div>
+          <ul class="about-app__list">
+            <li class="about-app__item">
+              <strong>Поднимает настроение</strong>
+              <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
+            </li>
+            <li class="about-app__item">
+              <strong>Меняет мир вокруг</strong>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="about-app__item">
+              <strong>Заводит новых друзей</strong>
+              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
         </div>
-        <ul class="about-app__list">
-          <li class="about-app__item">
-            <strong>Поднимает настроение</strong>
-            <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
-          </li>
-          <li class="about-app__item">
-            <strong>Меняет мир вокруг</strong>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="about-app__item">
-            <strong>Заводит новых друзей</strong>
-            <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
       </div>
     </div>
     
     <div class="effect">
       <div class="center-wrapper">
-        <div class="effect__timer">
-          <img src="img/timer-2.svg" alt="">
-        </div>
         <div class="effect__wrapper">
-          <h2 class="effect__promo">Эффект на 24 часа!</h2>
-          <p class="effect__text">Британские ученые провели исследованияи доказали, что положительный эффект от использования приложения длитсяцелые сутки!</p>
-          <a href="" class="effect__more">Узнать больше об исследовании</a>
+          <div class="effect__timer">
+            <img src="img/timer-2.svg" alt="">
+          </div>
+          <div class="effect__text-wrapper">
+            <h2 class="effect__promo">Эффект на 24 часа!</h2>
+            <p class="effect__text">Британские ученые провели исследованияи доказали, что положительный эффект от использования приложения длитсяцелые сутки!</p>
+            <a href="" class="effect__more">Узнать больше об исследовании</a>
+          </div>
         </div>
       </div>
     </div>

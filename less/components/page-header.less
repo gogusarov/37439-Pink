@@ -1,0 +1,72 @@
+.page-header {
+  &__logo {
+    padding: 25px 0;
+    float: left;
+    position: relative;
+    z-index: 2;
+    //лажа
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    background: url("../img/background-fullsize.jpg") no-repeat 50% 50%;
+  }
+}
+
+.main-nav:after, .header-logo-wrapper:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+.main-nav {
+  background: rgba(28, 37, 47, 0.8);
+  @media (min-width: @tablet-breakpoint) {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    //лажа
+  }
+  &__toggle {
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (min-width: @tablet-breakpoint) {
+      display: none;
+    }
+  }  
+  &__list {
+    @media (min-width: @tablet-breakpoint) {
+      float: right;
+    }
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      float: none;
+    }
+  }
+  &__item {
+    background: @bg-menu-item;
+    border-top: 1px #495562 solid;
+    border-bottom: 1px black solid;
+    @media (min-width: @tablet-breakpoint) {
+      display: inline-block;
+      padding: 45px 37px;
+      background: none;
+      border: none;
+    }
+  }
+}
+
+.app-download {
+  background: @bg-app-download;
+  color: white;
+  &__links a {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  @media (min-width: @tablet-breakpoint) {
+    background: none;
+  }
+}
