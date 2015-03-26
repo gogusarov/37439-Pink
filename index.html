@@ -14,8 +14,8 @@
 <body>
   <header class="page-header">
     <div class="nav">
-      <div class="center-wrapper">
-        <div class="header-logo-wrapper">
+      <div class="center-wrapper center-wrapper--tablet">
+        <div class="page-header__logo-wrapper">
           <picture class="page-header__logo">
             <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-3@2x.png">
             <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-3@1x.png">
@@ -38,16 +38,27 @@
     
     <div class="app-download">
       <div class="center-wrapper">
-        <div class="col--left">
+        <div class="left-wrapper">
           <div class="app-download__appeal">Взгляните на жизнь иначе!</div>
-          <figure class="hand-with-phone"><img src="" alt=""></figure>
-          <a class="btn">Скачать приложение</a>
-          <div class="app-download__links">
-            <a href="" class="app-download__link"><img src="img/apple-logo.svg" alt="Apple"></a>
-            <a href="" class="app-download__link"><img src="img/android-logo.svg" alt="Android"></a>
-            <a href="" class="app-download__link"><img src="img/microsoft-logo.svg" alt="Windows"></a>
+          <figure class="hand-with-phone">
+            <img src="img/iphone-hand-1.png" alt="">
+            <!--<picture>
+              <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/iphone-hand-3@2x.png">
+              <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/iphone-hand-3@1x.png">
+              <source media="(min-width: 600px) and (min-resolution: 1.5dppx)" srcset="img/iphone-hand-2@2x.png">
+              <source media="(min-width: 600px) and (max-resolution: 1.5dppx)" srcset="img/iphone-hand-2@1x.png">
+              <img src="img/iphone-hand-1.png" alt="">
+            </picture>-->
+          </figure>
+          <div class="app-download__section">
+            <a class="btn">Скачать приложение</a>
+            <div class="app-download__links">
+              <a href="" class="app-download__link"><img src="img/apple-logo.svg" alt="Apple"></a>
+              <a href="" class="app-download__link"><img src="img/android-logo.svg" alt="Android"></a>
+              <a href="" class="app-download__link"><img src="img/microsoft-logo.svg" alt="Windows"></a>
+            </div>
+            <p class="app-download__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
           </div>
-          <p class="app-download__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, Mac OS, Windows 8</p>
         </div>
       </div>
     </div>
@@ -67,19 +78,22 @@
         <div class="about-app__wrapper">
           <div class="screenshots">
             <div class="screenshots__item">
-              <img src="img/iphone-screen-3-1@1x.png"
-              srcset="img/iphone-screen-3-1@2x.png 2x" alt="Первый скрин">
+              <picture>
+                <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-1@2x.png">
+                <img src="img/iphone-screen-3-1@1x.png" alt="Первый скрин">
+              </picture>
             </div>
             <div class="screenshots__item">
-              <img src="img/iphone-screen-3-2@1x.png"
-              srcset="img/iphone-screen-3-2@2x.png 2x"  alt="Второй скрин">
+              <picture>
+                <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-2@2x.png">
+                <img src="img/iphone-screen-3-2@1x.png" alt="Второй скрин">
+              </picture>
             </div>
             <div class="screenshots__item">
-              <img src="img/iphone-screen-3-3@1x.png"
-              srcset="img/iphone-screen-3-3@2x.png 2x" alt="Третий скрин">
-            </div>
-            <div class="screenshots__item">
-              <img src="img/iphone-screen-2-3@1x.png" alt="">
+              <picture>
+                <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-3@2x.png">
+                <img src="img/iphone-screen-3-3@1x.png" alt="Третий скрин">
+              </picture>
             </div>
           </div>
           <ul class="about-app__list">
@@ -104,7 +118,7 @@
       <div class="center-wrapper">
         <div class="effect__wrapper">
           <div class="effect__timer">
-            <img src="img/timer-2.svg" alt="">
+            <img src="img/timer-2%20opt.svg" alt="">
           </div>
           <div class="effect__text-wrapper">
             <h2 class="effect__promo">Эффект на 24 часа!</h2>
@@ -118,24 +132,29 @@
     <section class="comments">
       <div class="center-wrapper">
         <div class="slider-comments">
-          <blockquote class="comment">
-            <p class="comment__about-author">
-              <cite class="comment__author">Николай Петров</cite><span>25 лет, водитель трамвая</span>
-            </p>
-            <p class="comment__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <blockquote class="comment">
-            <p class="comment__about-author">
-              <cite class="comment__author">Петр Николаев</cite> <span>52 года, пешеход</span>
-            </p>
-            <p class="comment__text">Не верьте ничему из того, что сказал Николай Петров!</p>
-          </blockquote>
-          <blockquote class="comment">
-            <p class="comment__about-author">
-              <cite class="comment__author">Anonymous</cite><span>не пойми кто</span>
-            </p>
-            <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
-          </blockquote>
+          <a href="" class="control-arrow"></a>
+          
+          <div class="comment-wrapper">
+            <blockquote class="comment">
+              <p class="comment__about-author">
+                <cite class="comment__author">Николай Петров</cite><span>25 лет, водитель трамвая</span>
+              </p>
+              <p class="comment__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <blockquote class="comment">
+              <p class="comment__about-author">
+                <cite class="comment__author">Петр Николаев</cite> <span>52 года, пешеход</span>
+              </p>
+              <p class="comment__text">Не верьте ничему из того, что сказал Николай Петров!</p>
+            </blockquote>
+            <blockquote class="comment">
+              <p class="comment__about-author">
+                <cite class="comment__author">Anonymous</cite><span>не пойми кто</span>
+              </p>
+              <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
+            </blockquote>
+          </div>
+          <a href="" class="control-arrow control-arrow--right"></a>
           <div class="controls">
             <a class="controls__item controls__item--active" href=""></a>
             <a class="controls__item" href=""></a>
@@ -219,29 +238,37 @@
     
     <div class="links">
       <div class="center-wrapper">
-        <picture class="links-logo">
-          <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@2x.png">
-          <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@1x.png">
-          <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@2x.png">
-          <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@1x.png">
-          <img src="img/Pink-logo-footer-2@1x.png" srcset="img/Pink-logo-footer-2@2x.png 2x">
-        </picture>
-        <div class="social">
-          <a href="" class="social__item social__item--tw"><img src="img/twitter.svg" alt=""></a>
-          <a href="" class="social__item social__item--fb"><img src="img/facebook.svg" alt=""></a>
-          <a href="" class="social__item social__item--yt"><img src="img/youtube.svg" alt=""></a>
-        </div>
-        <div class="copyright">
-          <p>
-            Website by 
-            <a href="glukhanko">
-              <img src="img/glukhanko.svg" alt="">
+        <div class="links-wrapper">
+          <picture class="links-logo">
+            <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@2x.png">
+            <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-3@1x.png">
+            <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@2x.png">
+            <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-footer-2@1x.png">
+            <img src="img/Pink-logo-footer-2@1x.png" srcset="img/Pink-logo-footer-2@2x.png 2x">
+          </picture>
+          <div class="social">
+            <a href="" class="social__item social__item--tw">
+              <img src="img/twitter%20opt.svg" alt="">
             </a>
-            for
-            <a href="htmlacademy">
-              <img src="img/htmlacademy.svg" alt="">
+            <a href="" class="social__item social__item--fb">
+              <img src="img/facebook%20opt.svg" alt="">
             </a>
-          </p>
+            <a href="" class="social__item social__item--yt">
+              <img src="img/youtube%20opt.svg" alt="">
+            </a>
+          </div>
+          <div class="copyright">
+            <p>
+              Website by 
+              <a href="glukhanko">
+                <img src="img/glukhanko%20opt.svg" alt="">
+              </a>
+              for
+              <a href="htmlacademy">
+                <img src="img/htmlacademy%20opt.svg" alt="">
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>

@@ -19,22 +19,26 @@
   
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
     width: 620px;
+    &--tablet {
+      width: auto;
+    }
   }
   
   @media (min-width: @tablet-breakpoint) {
     width: 940px;
   }
+
 }
 
 
 
 @media (min-width: @mobile-breakpoint) {
 
-  .col--left {
+  .left-wrapper {
     float: left;
   }
   
-  .col--right {
+  .right-wrapper {
     float: right;
   }
 }
@@ -48,15 +52,27 @@
     display: flex;
     flex-direction: column;
   }
+  
   &__list {
+    padding: 45px 0;
     order: 1;
   }
+  
+  &__item {
+    padding: 10px 25px;
+  }
+  
   .screenshots {
     display: flex;
     &__item:not(:last-child) {
       display: none;
     }
-   
+    
+    /*&__item {
+      img {
+        width: 160px;
+      }
+    }*/
     flex-direction: row;
     justify-content: center;
     order: 2;
@@ -73,13 +89,13 @@
     .screenshots {
       &__item:not(:last-child) {
         display: block;
+      }
+      /*&__item {
         img {
-          width: 292px
+          width: 182px;
+          
         }
-      }
-      &__item:last-child {
-        display: none;
-      }
+      }*/
       order: 1;
     }
     &__list {
@@ -107,6 +123,9 @@
       }
       &__item:last-child {
         display: block;
+        img {
+          width: 270px;
+        }
       }
     }
   }
@@ -144,6 +163,40 @@
   }
 }
 
+.slider-comments {
+  position: relative;
+  .control-arrow {
+    display: none;
+    width: 22px;
+    height: 42px;
+    background: url("../img/left-arrow.jpg");
+    @media (min-width: @tablet-breakpoint) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+  @media (min-width: @tablet-breakpoint) {
+    padding-top: 150px;
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      top: 20px;
+      left: 0;
+      right: 0;
+      width: 77px;
+      height: 64px;
+      background: url("../img/quotes.svg");
+    }
+    .controls {
+      display: none;
+    }
+  }
+}
 
 .comment {
   margin: 0;
@@ -168,6 +221,11 @@
   @media (min-width: @tablet-breakpoint) {
     &__text {
       padding: 0 80px;
+    }
+    &-wrapper {
+      display: inline-block;
+      vertical-align: middle;
+      width: 780px;
     }
   }
 }
@@ -204,10 +262,22 @@
     border: 2px solid @tariffs-border-color;
   }
   td {
+    position: relative;
     width: 280px;
+    padding: 10px;
     text-align: left;
     text-transform: uppercase;
     border: 2px solid @tariffs-border-color;
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 30px;
+      height: 22px;
+      top: 5px;
+      right: 5px;
+      background: url("../img/yes%20opt.svg");
+    }
   }
   &__name {
     color: white;

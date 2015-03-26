@@ -2,37 +2,63 @@
   &__logo {
     padding: 25px 0;
     float: left;
-    position: relative;
-    z-index: 2;
-    //лажа
   }
   
+  &__logo-wrapper {
+    @media (max-width: @tablet-breakpoint) {
+      &:after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+      background: @bg-menu-item;
+//      border-top: 1px #495562 solid;
+      border-bottom: 1px black solid;
+    }
+  }
+  background: url("../../img/background-1@1x.jpg") no-repeat 50% 50%;
+  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+    background: url("../../img/background-2@1x.jpg") no-repeat 50% 50%;
+  }
   @media (min-width: @tablet-breakpoint) {
-    background: url("../img/background-fullsize.jpg") no-repeat 50% 50%;
+    background: url("../../img/background-fullsize.jpg") no-repeat 50% 50%;
   }
 }
 
-.main-nav:after, .header-logo-wrapper:after {
+.app-download__section {
+  background: @bg-app-download;
+  padding: 10px 0;
+}
+
+@media(min-width: @mobile-breakpoint){
+  .app-download .left-wrapper{
+    min-height: 400px;
+  }
+  .app-download__section{
+    background: transparent;
+  }
+  .hand-with-phone{
+    position: absolute;
+    right:10px;
+  }
+}
+
+.main-nav:after {
   display: table;
   content: '';
   clear: both;
 }
 
-.main-nav {
+.nav {
   background: rgba(28, 37, 47, 0.8);
-  @media (min-width: @tablet-breakpoint) {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    //лажа
-  }
+}
+
+.main-nav {
   &__toggle {
     float: right;
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: 40px;
     right: 0;
     @media (min-width: @tablet-breakpoint) {
       display: none;
@@ -60,7 +86,6 @@
 }
 
 .app-download {
-  background: @bg-app-download;
   color: white;
   &__links a {
     display: inline-block;

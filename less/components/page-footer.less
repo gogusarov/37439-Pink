@@ -34,7 +34,7 @@
   @media (min-width: @mobile-breakpoint) {
     display: block;
   }
-  .center-wrapper {
+  &-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center
@@ -44,7 +44,20 @@
 .social {
   a {
     display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 2px solid @gray;
+    border-radius: 50%;
     vertical-align: middle;
+    img {
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
   }
 }
 
