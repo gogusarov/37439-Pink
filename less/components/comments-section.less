@@ -1,0 +1,96 @@
+.slider-comments {
+  position: relative;
+  
+  .control-arrow {
+    display: none;
+    width: 22px;
+    height: 42px;
+    background: url("../img/left-arrow.jpg");
+    @media (min-width: @tablet-breakpoint) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &--right {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    padding-top: 150px;
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      top: 20px;
+      left: 0;
+      right: 0;
+      width: 77px;
+      height: 64px;
+      background: url("../img/quotes.svg");
+    }
+    .controls {
+      display: none;
+    }
+  }
+}
+
+.comment {
+  margin: 0;
+  &__about-author {
+    span {
+      display: none;
+    }
+  }
+  &__text {
+    font-size: @size-comment-text-mobile;
+  }
+  &__author {
+    font-size: @size-comment-name-mobile;
+    font-style: normal;
+    font-weight: @font-weight-bold;
+  }
+  
+  &:not(:first-of-type) {
+    display: none;
+  }
+  
+  @media (min-width: @mobile-breakpoint) {
+    display: flex;
+    flex-direction: column;
+    &__about-author {
+      span {
+        display: block;
+        font-size: @size-comment-prof-tablet;
+      }
+      order: 2;
+    }
+    &__text {
+      font-size: @size-comment-text;
+      order: 1;
+    }
+    &__author {
+      font-size: @size-comment-name-tablet;
+    }
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    &__text {
+      font-size: @size-comment-text;
+      padding: 0 80px;
+    }
+    &-wrapper {
+      display: inline-block;
+      vertical-align: middle;
+      width: 780px;
+    }
+    &__author {
+      font-size: @size-comment-name-desktop;
+    }
+    &__about-author {
+      span {
+        font-size: @size-comment-prof-desktop;
+      }
+    }
+  }
+}

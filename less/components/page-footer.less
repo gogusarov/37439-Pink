@@ -1,4 +1,35 @@
 .contacts {
+  &__item-address--mail {
+    &:hover {
+      text-decoration: underline;
+      color: black;
+    }
+    &:active {
+      color: @gray;
+    }
+  }
+  
+  &__appeal {
+    font-weight: @font-weight-light;
+    @media (max-width: @mobile-breakpoint) {
+      font-size: @size-footer-appeal-mobile;
+    }
+    @media (max-width: @tablet-breakpoint) {
+      font-size: @size-footer-appeal-tablet;
+    }
+    @media (min-width: @tablet-breakpoint) {
+      font-size: @size-footer-appeal-desktop;
+    }
+  }
+  
+  &__name {
+    font-size: @size-contacts-name;
+  }
+  
+  &__address {
+    font-size: @size-contacts-address;
+  }
+  
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
     &__item {
       display: inline-block;
@@ -29,6 +60,11 @@
   } 
 }
 
+.map {
+  position: relative;
+  height: 380px;
+}
+
 .links {
   display: none;
   @media (min-width: @mobile-breakpoint) {
@@ -42,7 +78,7 @@
 }
 
 .social {
-  a {
+  &__item {
     display: inline-block;
     position: relative;
     height: 40px;
@@ -50,13 +86,14 @@
     border: 2px solid @gray;
     border-radius: 50%;
     vertical-align: middle;
-    img {
-      position: absolute;
-      margin: auto;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
+    &--tw {
+      background: url("../../img/twitter_opt.svg") no-repeat 50% 50%;
+    }
+    &--fb {
+      background: url("../../img/facebook_opt.svg") no-repeat 50% 50%;
+    }
+    &--yt {
+      background: url("../../img/youtube_opt.svg") no-repeat 50% 50%;
     }
   }
 }
@@ -65,5 +102,13 @@
   a {
     display: inline-block;
     vertical-align: middle;
+  }
+  
+  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+    font-size: @size-copyright-tablet;
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    font-size: @size-copyright-desktop;
   }
 }

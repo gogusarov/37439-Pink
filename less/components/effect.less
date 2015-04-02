@@ -1,0 +1,53 @@
+.effect {
+  display: none;
+  background: @bg-about-app;
+  
+  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+    background: none;
+  }
+  &__wrapper{
+    display: flex;
+    flex-direction: row;
+  }
+  &__text-wrapper {
+    text-align: left;
+  }
+  &__promo {
+    font-size: @size-effect-head;
+  }
+  &__more {
+    color: @pink;
+    text-decoration: underline;
+  }
+  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+    display: block;
+    &__text{
+      font-size: @size-effect-text-tablet;
+    }
+    &__more {
+      font-size: @size-effect-link-tablet;
+    }
+    &__timer {
+      width: 50%
+    } 
+    &__text-wrapper {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    display: block;
+    &__text{
+      font-size: @size-effect-text-desktop;
+    }
+    &__more {
+      font-size: @size-effect-link-desktop;
+    }
+    &__timer {
+      width: 33.3333%;
+    } 
+    &__text-wrapper {
+      width: 66.6666%;
+    }
+  }
+}

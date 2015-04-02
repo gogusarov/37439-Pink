@@ -1,7 +1,10 @@
 .page-header {
   &__logo {
-    padding: 25px 0;
+    padding: 25px;
     float: left;
+    @media (max-width: @mobile-breakpoint) {
+      padding-top: 40px;
+    }
   }
   
   &__logo-wrapper {
@@ -16,12 +19,12 @@
       border-bottom: 1px black solid;
     }
   }
-  background: url("../../img/background-1@1x.jpg") no-repeat 50% 50%;
+  background: url("../../img/iphone-hand-1.png") no-repeat 35% 50%, url("../../img/background-1@1x.jpg") no-repeat 50% 20%;
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
-    background: url("../../img/background-2@1x.jpg") no-repeat 50% 50%;
+    background: url("../../img/iphone-hand-2@1x.png") no-repeat 50% 100%, url("../../img/background-2@1x.jpg") no-repeat 50% 50%;
   }
   @media (min-width: @tablet-breakpoint) {
-    background: url("../../img/background-fullsize.jpg") no-repeat 50% 50%;
+    background: url("../../img/iphone-hand-3@1x.png") no-repeat 50% 100%, url("../../img/background-fullsize.jpg") no-repeat 50% 50%;
   }
 }
 
@@ -59,14 +62,20 @@
     cursor: pointer;
     position: absolute;
     top: 40px;
-    right: 0;
+    right: 20px;
     @media (min-width: @tablet-breakpoint) {
       display: none;
     }
   }  
   &__list {
+    font-size: @size-menu;
+    font-weight: @font-weight-bold;
+    @media (max-width: @tablet-breakpoint) {
+      display: none;
+    }
     @media (min-width: @tablet-breakpoint) {
       float: right;
+      font-weight: @font-weight-normal;
     }
     @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
       float: none;
@@ -74,6 +83,7 @@
   }
   &__item {
     background: @bg-menu-item;
+    padding: 20px 0;
     border-top: 1px #495562 solid;
     border-bottom: 1px black solid;
     @media (min-width: @tablet-breakpoint) {
@@ -87,9 +97,50 @@
 
 .app-download {
   color: white;
-  &__links a {
+  font-weight: @font-weight-light;
+  &__links {
+    @media (min-width: @tablet-breakpoint) {
+      padding: 55px 0;
+    }
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      padding: 40px 0;
+    }
+  }
+  &__link{
     display: inline-block;
     vertical-align: baseline;
+    margin-right: 30px;
+  }
+  &__link:last-of-type {
+    margin-right: 0;
+  }
+  &__appeal {
+    padding-top: 40px;
+    @media (max-width: @mobile-breakpoint) {
+      margin-bottom: 315px;
+      font-size: @size-header-appeal-mobile;
+    }
+    @media (min-width: @mobile-breakpoint) {
+      font-size: @size-header-appeal-tablet;
+    }
+    @media (min-width: @tablet-breakpoint) {
+      font-size: @size-header-appeal-desktop;
+    }
+    
+    &--no-mobile {
+      @media (max-width: @mobile-breakpoint) {
+        display: none;
+      }
+    }
+  }
+  &__description {
+    padding-bottom: 90px;
+    @media (max-width: @mobile-breakpoint) {
+      font-size: @size-download-text-mobile;
+    }
+    @media (min-width: @mobile-breakpoint) {
+      font-size: @size-download-text;
+    }
   }
   @media (min-width: @tablet-breakpoint) {
     background: none;

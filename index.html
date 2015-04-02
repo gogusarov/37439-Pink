@@ -6,10 +6,6 @@
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <script>
-    document.createElement("picture");
-  </script>
-  <script src="js/picturefill.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -25,7 +21,9 @@
           </picture>
         </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle" href=""><img src="img/menu-burger.svg" alt=""></a>
+          <a class="main-nav__toggle" href="">
+            <img src="img/menu-burger.svg" alt="">
+          </a>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="">Информация</a></li>
             <li class="main-nav__item"><a href="">Возможности</a></li>
@@ -39,17 +37,7 @@
     <div class="app-download">
       <div class="center-wrapper">
         <div class="left-wrapper">
-          <div class="app-download__appeal">Взгляните на жизнь иначе!</div>
-          <figure class="hand-with-phone">
-            <img src="img/iphone-hand-1.png" alt="">
-            <!--<picture>
-              <source media="(min-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/iphone-hand-3@2x.png">
-              <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/iphone-hand-3@1x.png">
-              <source media="(min-width: 600px) and (min-resolution: 1.5dppx)" srcset="img/iphone-hand-2@2x.png">
-              <source media="(min-width: 600px) and (max-resolution: 1.5dppx)" srcset="img/iphone-hand-2@1x.png">
-              <img src="img/iphone-hand-1.png" alt="">
-            </picture>-->
-          </figure>
+          <div class="app-download__appeal">Взгляните<br class="app-download__appeal--no-mobile"> на жизнь<br> иначе!</div>
           <div class="app-download__section">
             <a class="btn">Скачать приложение</a>
             <div class="app-download__links">
@@ -69,21 +57,24 @@
   <main>    
     <div class="promo">
       <div class="center-wrapper">
-        <h1 class="promo__item">Устали от серости мегаполиса?<br>Нам есть, что вам<br> предложить!</h1>
+        <h1 class="promo__item">Устали от серости мегаполиса?<br class="promo__item--mobile-margin">Нам есть, что вам<br> предложить!</h1>
       </div>
     </div>
     
-    <div class="about-app">  
+    <div class="about-app">
+      <svg class="svg-angle" preserveAspectRatio="none" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon fill="inherit" points="50,0 0,50 0,0"></polygon>
+      </svg>
       <div class="center-wrapper">
         <div class="about-app__wrapper">
           <div class="screenshots">
-            <div class="screenshots__item">
+            <div class="screenshots__item screenshots__item--desktop">
               <picture>
                 <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-1@2x.png">
                 <img src="img/iphone-screen-3-1@1x.png" alt="Первый скрин">
               </picture>
             </div>
-            <div class="screenshots__item">
+            <div class="screenshots__item screenshots__item--desktop">
               <picture>
                 <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-2@2x.png">
                 <img src="img/iphone-screen-3-2@1x.png" alt="Второй скрин">
@@ -102,11 +93,11 @@
               <p>Приложение позволит вам победить осеннюю хандру и депрессию вуквально в несколько кликов!</p>
             </li>
             <li class="about-app__item">
-              <strong>Меняет мир вокруг</strong>
+              <strong>Меняет мир<br class="about-app__item--desktop"> вокруг</strong>
               <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="about-app__item">
-              <strong>Заводит новых друзей</strong>
+              <strong>Заводит<br class="about-app__item--desktop"> новых друзей</strong>
               <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
@@ -118,7 +109,7 @@
       <div class="center-wrapper">
         <div class="effect__wrapper">
           <div class="effect__timer">
-            <img src="img/timer-2%20opt.svg" alt="">
+            <img src="img/timer-2_opt.svg" alt="">
           </div>
           <div class="effect__text-wrapper">
             <h2 class="effect__promo">Эффект на 24 часа!</h2>
@@ -165,17 +156,20 @@
     </section>
     
     <section class="tariffs">
+     <svg class="svg-angle" preserveAspectRatio="none" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <polygon fill="inherit" points="50,0 0,50 0,0"></polygon>
+      </svg>
       <table class="tariffs__features">
         <thead class="tariffs__row-header">
           <tr class="tariffs__header">
-            <th>
-              
+            <th class="tariffs__cell--no-mobile"> 
             </th>
             <th>
               <p class="tariffs__name">База</p>
               <p class="tariffs__price">1,99 USD</p>
             </th>
             <th>
+              <div class="tariffs__hit">ХИТ</div>
               <p class="tariffs__name">Стандарт</p>
               <p class="tariffs__price">3,99 USD</p>
             </th>
@@ -186,19 +180,49 @@
           </tr>
         </thead>
         <tr>
-          <td>Розовый фильтр</td>
-          <td>Розовый фильтр</td>
-          <td>Розовый фильтр</td>
+          <td class="tariffs__cell--no-mobile">Розовый фильтр</td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Розовый фильтр</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+          </td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Розовый фильтр</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>  
+          </td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Розовый фильтр</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>  
+          </td>          
         </tr>
         <tr>
-          <td>Смайлики</td>
-          <td>Смайлики</td>
-          <td>Смайлики</td>
+          <td class="tariffs__cell--no-mobile">Смайлики</td>
+          <td class="tariffs__cell--crossed">
+            <span class="tariffs__cell--mobile">Смайлики</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
+          </td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Смайлики</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+          </td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Смайлики</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+          </td>
         </tr>
         <tr>
-          <td>Комментарии</td>
-          <td>Комментарии</td>
-          <td>Комментарии</td>
+          <td class="tariffs__cell--no-mobile">Комментарии</td>
+          <td class="tariffs__cell--crossed">
+            <span class="tariffs__cell--mobile">Комментарии</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
+          </td>
+          <td class="tariffs__cell--crossed">
+            <span class="tariffs__cell--mobile">Комментарии</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>  
+          </td>
+          <td class="tariffs__cell--checked">
+            <span class="tariffs__cell--mobile">Комментарии</span>
+            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+          </td>
         </tr>
       </table>
       <div class="controls">
@@ -217,23 +241,22 @@
         <p class="contacts__appeal">Остались вопросы?<br> Свяжитесь с нами!</p>
         <ul class="contacts__list">
           <li class="contacts__item">
-            <p class="contacts__item-name">Звоните:</p>
-            <p class="contacts__item-address">8 (800) 1000 900</p>
+            <p class="contacts__name">Звоните:</p>
+            <p class="contacts__address">8 (800) 1000 900</p>
           </li>
           <li class="contacts__item">
-            <p class="contacts__item-name">Пишите:</p>
-            <p class="contacts__item-address">hello@pinkapp.ru</p>
+            <p class="contacts__name">Пишите:</p>
+            <p class="contacts__address contacts__item-address--mail">hello@pinkapp.ru</p>
           </li>
           <li class="contacts__item">
-            <p class="contacts__item-name">Приезжайте в гости:</p>
-            <p class="contacts__item-address">Санкт-Петербург,<br> Невский проспект, д. 20</p>
+            <p class="contacts__name">Приезжайте в гости:</p>
+            <p class="contacts__address">Санкт-Петербург,<br> Невский проспект, д. 20</p>
           </li>
         </ul>
       </div>
     </div>
     
-    <div class="map">
-      
+    <div id="yandex-map" class="map">
     </div>
     
     <div class="links">
@@ -247,25 +270,19 @@
             <img src="img/Pink-logo-footer-2@1x.png" srcset="img/Pink-logo-footer-2@2x.png 2x">
           </picture>
           <div class="social">
-            <a href="" class="social__item social__item--tw">
-              <img src="img/twitter%20opt.svg" alt="">
-            </a>
-            <a href="" class="social__item social__item--fb">
-              <img src="img/facebook%20opt.svg" alt="">
-            </a>
-            <a href="" class="social__item social__item--yt">
-              <img src="img/youtube%20opt.svg" alt="">
-            </a>
+            <a href="" class="social__item social__item--tw"></a>
+            <a href="" class="social__item social__item--fb"></a>
+            <a href="" class="social__item social__item--yt"></a>
           </div>
           <div class="copyright">
             <p>
               Website by 
               <a href="glukhanko">
-                <img src="img/glukhanko%20opt.svg" alt="">
+                <img src="img/glukhanko_opt.svg" alt="">
               </a>
               for
               <a href="htmlacademy">
-                <img src="img/htmlacademy%20opt.svg" alt="">
+                <img src="img/htmlacademy_opt.svg" alt="">
               </a>
             </p>
           </div>
@@ -273,5 +290,12 @@
       </div>
     </div>
   </footer>
+  
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async></script>
+  <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
