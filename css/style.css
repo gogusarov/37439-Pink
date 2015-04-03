@@ -388,6 +388,29 @@ p {
   display: none;
   background: #f2f2f2;
 }
+.effect__timer {
+  position: relative;
+  background: url("../../img/timer-2_opt.svg") no-repeat 50% 50%;
+}
+.effect__timer-details {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  bottom: 65px;
+  width: 168px;
+  height: 168px;
+  border-radius: 50%;
+  border: 12px solid #d22856;
+  color: #d22856;
+  font-size: 12rem;
+  font-weight: 700;
+  line-height: 160px;
+  vertical-align: middle;
+}
+.effect__text-wrapper {
+  padding: 90px 0;
+}
 @media (min-width: 600px) and (max-width: 1200px) {
   .effect {
     background: none;

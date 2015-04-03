@@ -41,7 +41,8 @@ module.exports = function(grunt) {
         },
         options: {
           watchTask: true,
-          server: './'
+          server: './',
+          browser: ["google chrome", "firefox"]
         }
       }
     },

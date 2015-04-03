@@ -2,6 +2,32 @@
   display: none;
   background: @bg-about-app;
   
+  &__timer {
+    position: relative;
+    background: url("../../img/timer-2_opt.svg") no-repeat 50% 50%;
+  }
+  
+  &__timer-details {
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 65px;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 12px solid @pink;
+    color: @pink;
+    font-size: @size-effect-numbers-desktop;
+    font-weight: @font-weight-bold;
+    line-height: 160px;
+    vertical-align: middle;
+  }
+  
+  &__text-wrapper {
+    padding: 90px 0;
+  }
+  
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
     background: none;
   }
