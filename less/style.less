@@ -1,34 +1,15 @@
 @import 'variables.less';
 @import 'components/scaffolding.less';
-@import 'components/buttons.less';
 @import 'components/type.less';
+@import 'components/buttons.less';
 @import 'components/page-header.less';
+@import 'components/promo.less';
 @import 'components/about-application.less';
 @import 'components/effect.less';
 @import 'components/comments-section.less';
 @import 'components/tariffs';
 @import 'components/page-footer.less';
-
-
-.promo {
-  &__item {
-    &--mobile-margin {
-      @media(max-width: @mobile-breakpoint) {
-        margin-bottom: 30px;
-      }
-    }
-    font-weight: @font-weight-light;
-    @media (max-width: @mobile-breakpoint) {
-      font-size: @size-promo-mobile;
-    }
-    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
-      font-size: @size-promo-tablet;
-    }
-    @media (min-width: @tablet-breakpoint) {
-      font-size: @size-promo-desktop;
-    }
-  }
-}
+@import 'components/links.less';
 
 
 

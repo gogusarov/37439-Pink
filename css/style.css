@@ -31,6 +31,11 @@ img {
 .center-wrapper:after {
   clear: both;
 }
+@media (min-width: 600px) {
+  .center-wrapper--mobile {
+    width: auto;
+  }
+}
 @media (min-width: 600px) and (max-width: 1200px) {
   .center-wrapper {
     width: 620px;
@@ -52,6 +57,9 @@ img {
     float: right;
   }
 }
+.control-radio {
+  display: none;
+}
 .controls {
   text-align: center;
 }
@@ -63,6 +71,7 @@ img {
   border-radius: 50%;
   background: #bec2c7;
   border: 3px solid white;
+  cursor: pointer;
 }
 .controls__item--active {
   background: white;
@@ -76,12 +85,33 @@ img {
   height: 50px;
   fill: white;
 }
+html {
+  line-height: 1.2;
+  font-family: 'Open Sans', 'Verdana', 'Terminal', sans-serif;
+  font-size: 10px;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  margin: 10px 0;
+  font-weight: 300;
+}
+p {
+  margin: 10px 0;
+}
+cite {
+  font-style: normal;
+}
+blockquote {
+  margin: 0;
+}
 .btn {
   display: inline-block;
   border: 3px solid white;
   border-radius: 28px;
   padding: 14px 35px;
-  margin: 28px 0;
+  margin: 18px 0;
   cursor: pointer;
   font-weight: 700;
 }
@@ -103,53 +133,29 @@ img {
     font-size: 2.1rem;
   }
 }
-html {
-  line-height: 1.2;
-  font-family: 'Open Sans', 'Verdana', 'Terminal', sans-serif;
-  font-size: 10px;
-}
-ul {
-  list-style: none;
-}
-p {
-  margin: 10px 0;
-}
-.main-nav__list {
-  text-transform: uppercase;
-}
-@media (min-width: 1200px) {
-  .main-nav__list {
-    text-transform: none;
-  }
-}
-.contacts__name {
-  color: #283645;
-  font-weight: 700;
-}
-.contacts__address {
-  color: #d22856;
-  font-weight: 300;
-}
-.contacts__list {
-  list-style: none;
-}
 .page-header {
-  background: url("../../img/iphone-hand-1.png") no-repeat 35% 50%, url("../../img/background-1@1x.jpg") no-repeat 50% 20%;
+  background: url("../../img/iphone-hand-1.png") no-repeat 40% 41%, url("../../img/background-1@1x.jpg") no-repeat 50% 0%;
 }
 .page-header__logo {
-  padding: 25px;
+  padding: 20px 20px 20px 20px;
   float: left;
 }
 @media (max-width: 600px) {
   .page-header__logo {
-    padding-top: 40px;
+    padding-top: 35px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .page-header__logo {
+    padding: 30px 40px 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .page-header__logo {
+    padding-top: 25px;
   }
 }
 @media (max-width: 1200px) {
-  .page-header__logo-wrapper {
-    background: #283645;
-    border-bottom: 1px black solid;
-  }
   .page-header__logo-wrapper:after {
     display: block;
     content: '';
@@ -158,44 +164,52 @@ p {
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   .page-header {
-    background: url("../../img/iphone-hand-2@1x.png") no-repeat 50% 100%, url("../../img/background-2@1x.jpg") no-repeat 50% 50%;
+    background: url("../../img/iphone-hand-2@1x.png") no-repeat 50% 100%, url("../../img/background-2@1x.jpg") no-repeat 50% 100%;
   }
 }
 @media (min-width: 1200px) {
   .page-header {
-    background: url("../../img/iphone-hand-3@1x.png") no-repeat 50% 100%, url("../../img/background-fullsize.jpg") no-repeat 50% 50%;
+    background: url("../../img/iphone-hand-3@1x.png") no-repeat 50% 100%, url("../../img/background-fullsize.jpg") no-repeat 50% 100%;
   }
-}
-.app-download__section {
-  background: #1d2631;
-  padding: 10px 0;
 }
 @media (min-width: 600px) {
   .app-download .left-wrapper {
     min-height: 400px;
   }
-  .app-download__section {
-    background: transparent;
-  }
-  .hand-with-phone {
-    position: absolute;
-    right: 10px;
-  }
-}
-.main-nav:after {
-  display: table;
-  content: '';
-  clear: both;
 }
 .nav {
   background: rgba(28, 37, 47, 0.8);
+}
+.nav--open-menu {
+  background: #283645;
+}
+.main-nav:before,
+.main-nav:after {
+  content: '';
+  display: table;
+}
+.main-nav:after {
+  clear: both;
 }
 .main-nav__toggle {
   float: right;
   cursor: pointer;
   position: absolute;
-  top: 40px;
-  right: 20px;
+  top: 32px;
+  right: 40px;
+  font-size: 24px;
+  color: white;
+}
+.main-nav__toggle:hover {
+  color: #d22856;
+}
+.main-nav__toggle:active {
+  color: #f1becc;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .main-nav__toggle {
+    top: 43px;
+  }
 }
 @media (min-width: 1200px) {
   .main-nav__toggle {
@@ -205,6 +219,7 @@ p {
 .main-nav__list {
   font-size: 1.8rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 @media (max-width: 1200px) {
   .main-nav__list {
@@ -215,6 +230,7 @@ p {
   .main-nav__list {
     float: right;
     font-weight: 400;
+    text-transform: none;
   }
 }
 @media (min-width: 600px) and (max-width: 1200px) {
@@ -222,11 +238,22 @@ p {
     float: none;
   }
 }
+.main-nav__list--visible {
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 100;
+}
 .main-nav__item {
   background: #283645;
   padding: 20px 0;
   border-top: 1px #495562 solid;
   border-bottom: 1px black solid;
+}
+@media (max-width: 1200px) {
+  .main-nav__item:hover {
+    border-top: 1px black solid;
+  }
 }
 @media (min-width: 1200px) {
   .main-nav__item {
@@ -236,9 +263,27 @@ p {
     border: none;
   }
 }
+.main-nav__item a:hover {
+  color: #d22856;
+}
+.main-nav__item a:active {
+  color: #f1becc;
+}
 .app-download {
   color: white;
   font-weight: 300;
+}
+.app-download__section {
+  background: #1d2631;
+  padding: 10px 0;
+}
+@media (min-width: 600px) {
+  .app-download__section {
+    background: transparent;
+  }
+}
+.app-download__links {
+  padding: 10px;
 }
 @media (min-width: 1200px) {
   .app-download__links {
@@ -247,19 +292,24 @@ p {
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   .app-download__links {
-    padding: 40px 0;
+    padding: 25px 10px;
   }
 }
 .app-download__link {
   display: inline-block;
   vertical-align: baseline;
-  margin-right: 30px;
+  margin-right: 33px;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .app-download__link {
+    margin-right: 28px;
+  }
 }
 .app-download__link:last-of-type {
   margin-right: 0;
 }
 .app-download__appeal {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 @media (max-width: 600px) {
   .app-download__appeal {
@@ -269,6 +319,9 @@ p {
 }
 @media (min-width: 600px) {
   .app-download__appeal {
+    padding-top: 93px;
+    padding-left: 20px;
+    padding-bottom: 4px;
     font-size: 4rem;
   }
 }
@@ -283,7 +336,9 @@ p {
   }
 }
 .app-download__description {
-  padding-bottom: 90px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  line-height: 24px;
 }
 @media (max-width: 600px) {
   .app-download__description {
@@ -293,11 +348,44 @@ p {
 @media (min-width: 600px) {
   .app-download__description {
     font-size: 1.8rem;
+    padding-top: 0;
+    padding-bottom: 90px;
   }
 }
 @media (min-width: 1200px) {
   .app-download {
     background: none;
+  }
+}
+.promo {
+  padding: 25px;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .promo {
+    padding: 25px 40px;
+  }
+}
+.promo__item {
+  font-weight: 300;
+}
+@media (max-width: 600px) {
+  .promo__item--mobile-margin {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .promo__item {
+    font-size: 2.4rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .promo__item {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .promo__item {
+    font-size: 5rem;
   }
 }
 .about-app {
@@ -309,7 +397,7 @@ p {
   flex-direction: column-reverse;
 }
 .about-app__list {
-  padding-top: 30px;
+  padding-top: 45px;
 }
 .about-app__item {
   text-align: center;
@@ -317,6 +405,7 @@ p {
 @media (min-width: 600px) and (max-width: 1200px) {
   .about-app__item {
     text-align: left;
+    padding: 25px 10px;
   }
 }
 @media (max-width: 1200px) {
@@ -390,7 +479,12 @@ p {
 }
 .effect__timer {
   position: relative;
-  background: url("../../img/timer-2_opt.svg") no-repeat 50% 50%;
+  background: url("../../img/timer.png") no-repeat 50% 50%;
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .effect__timer {
+    background-size: 263px 302px;
+  }
 }
 .effect__timer-details {
   position: absolute;
@@ -482,6 +576,12 @@ p {
 .slider-comments .control-arrow--right {
   transform: rotate(180deg);
 }
+.slider-comments .controls {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  z-index: 100;
+}
 @media (min-width: 1200px) {
   .slider-comments {
     padding-top: 150px;
@@ -502,8 +602,48 @@ p {
     display: none;
   }
 }
+#comment-btn1:checked ~ .controls label[for="comment-btn1"],
+#comment-btn2:checked ~ .controls label[for="comment-btn2"],
+#comment-btn3:checked ~ .controls label[for="comment-btn3"] {
+  background: white;
+  border: 3px solid #283645;
+}
+#comment-btn1:checked ~ .comment-wrapper .comment:first-of-type,
+#comment-btn2:checked ~ .comment-wrapper .comment:nth-of-type(2),
+#comment-btn3:checked ~ .comment-wrapper .comment:last-of-type {
+  opacity: 1;
+}
+.comment-wrapper {
+  position: relative;
+}
+@media (max-width: 600px) {
+  .comment-wrapper {
+    height: 150px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .comment-wrapper {
+    width: 620px;
+    height: 160px;
+  }
+}
+@media (min-width: 1200px) {
+  .comment-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    width: 780px;
+  }
+}
 .comment {
-  margin: 0;
+  transition: opacity 0.7s ease;
+}
+@media (max-width: 1200px) {
+  .comment {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 .comment__about-author span {
   display: none;
@@ -515,9 +655,6 @@ p {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 700;
-}
-.comment:not(:first-of-type) {
-  display: none;
 }
 @media (min-width: 600px) {
   .comment {
@@ -544,11 +681,6 @@ p {
     font-size: 1.8rem;
     padding: 0 80px;
   }
-  .comment-wrapper {
-    display: inline-block;
-    vertical-align: middle;
-    width: 780px;
-  }
   .comment__author {
     font-size: 2.4rem;
   }
@@ -559,11 +691,23 @@ p {
 .tariffs {
   position: relative;
   padding-top: 90px;
+  padding-bottom: 40px;
   background: #f2f2f2;
+}
+.tariffs__wrapper {
+  position: relative;
+}
+@media (max-width: 600px) {
+  .tariffs__wrapper {
+    width: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
 }
 .tariffs__features {
   margin: 0 auto;
   border-collapse: collapse;
+  transition: transform 1s ease;
 }
 .tariffs__header {
   background: #283645;
@@ -573,7 +717,9 @@ p {
   left: -18%;
   top: 10%;
   width: 50%;
+  padding: 5px 0;
   color: white;
+  font-size: 1.4rem;
   background: #d22856;
   transform: rotate(-45deg);
 }
@@ -587,6 +733,9 @@ p {
     display: none;
   }
 }
+.tariffs__cell--checked {
+  position: relative;
+}
 @media (max-width: 600px) {
   .tariffs__cell--checked:after {
     position: absolute;
@@ -594,10 +743,13 @@ p {
     display: block;
     width: 30px;
     height: 22px;
-    top: 5px;
-    right: 5px;
+    top: -5px;
+    right: 14px;
     background: url("../img/yes_opt.svg");
   }
+}
+.tariffs__cell--crossed {
+  position: relative;
 }
 @media (max-width: 600px) {
   .tariffs__cell--crossed:after {
@@ -606,12 +758,13 @@ p {
     display: block;
     width: 26px;
     height: 26px;
-    top: 5px;
-    right: 5px;
+    top: -5px;
+    right: 15px;
     background: url("../img/no_opt.svg");
   }
 }
 .tariffs th {
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
   width: 280px;
@@ -623,9 +776,9 @@ p {
   border-left: none;
 }
 .tariffs td {
-  position: relative;
+  box-sizing: border-box;
   min-width: 280px;
-  padding: 10px;
+  padding: 10px 20px;
   border: 2px solid #e5e5e5;
   text-align: left;
   font-size: 1.4rem;
@@ -670,19 +823,29 @@ p {
   }
 }
 .tariffs .controls {
-  padding: 40px;
+  padding-top: 40px;
 }
 @media (min-width: 600px) {
   .tariffs .controls__item {
     display: none;
   }
 }
-.contacts__item-address--mail:hover {
-  text-decoration: underline;
-  color: black;
-}
-.contacts__item-address--mail:active {
-  color: #f2f2f2;
+@media (max-width: 600px) {
+  #price-btn1:checked ~ .controls label[for="price-btn1"],
+  #price-btn2:checked ~ .controls label[for="price-btn2"],
+  #price-btn3:checked ~ .controls label[for="price-btn3"] {
+    background: white;
+    border: 3px solid #283645;
+  }
+  #price-btn1:checked ~ .tariffs__features {
+    transform: translateX(0px);
+  }
+  #price-btn2:checked ~ .tariffs__features {
+    transform: translateX(-260px);
+  }
+  #price-btn3:checked ~ .tariffs__features {
+    transform: translateX(-520px);
+  }
 }
 .contacts__appeal {
   font-weight: 300;
@@ -703,10 +866,21 @@ p {
   }
 }
 .contacts__name {
+  color: #283645;
   font-size: 1.8rem;
+  font-weight: 700;
 }
 .contacts__address {
+  color: #d22856;
   font-size: 2.4rem;
+  font-weight: 300;
+}
+.contacts__address--mail:hover {
+  text-decoration: underline;
+  color: black;
+}
+.contacts__address--mail:active {
+  color: #f2f2f2;
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   .contacts__item {
@@ -759,20 +933,28 @@ p {
   width: 40px;
   border: 2px solid #f2f2f2;
   border-radius: 50%;
+  font-size: 14px;
+  line-height: 40px;
   vertical-align: middle;
+  color: #d22856;
 }
-.social__item--tw {
-  background: url("../../img/twitter_opt.svg") no-repeat 50% 50%;
+.social__item:hover {
+  border-color: #283645;
 }
-.social__item--fb {
-  background: url("../../img/facebook_opt.svg") no-repeat 50% 50%;
+.social__item:active {
+  color: #f1becc;
 }
-.social__item--yt {
-  background: url("../../img/youtube_opt.svg") no-repeat 50% 50%;
-}
-.copyright a {
+.copyright__item {
   display: inline-block;
   vertical-align: middle;
+  color: #d22856;
+  font-size: 20px;
+}
+.copyright__item:hover {
+  color: #283645;
+}
+.copyright__item:active {
+  color: #f2f2f2;
 }
 @media (min-width: 600px) and (max-width: 1200px) {
   .copyright {
@@ -782,28 +964,5 @@ p {
 @media (min-width: 1200px) {
   .copyright {
     font-size: 1.8rem;
-  }
-}
-.promo__item {
-  font-weight: 300;
-}
-@media (max-width: 600px) {
-  .promo__item--mobile-margin {
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 600px) {
-  .promo__item {
-    font-size: 2.4rem;
-  }
-}
-@media (min-width: 600px) and (max-width: 1200px) {
-  .promo__item {
-    font-size: 4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .promo__item {
-    font-size: 5rem;
   }
 }

@@ -4,6 +4,7 @@
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Pink</title>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/fontello/fontello.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,12 +18,14 @@
             <source media="(min-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-3@1x.png">
             <source media="(min-width: 600px) and (max-width: 1200px) and (min-resolution: 1.5dppx)" srcset="img/Pink-logo-2@2x.png">
             <source media="(min-width: 600px) and (max-width: 1200px) and (max-resolution: 1.5dppx)" srcset="img/Pink-logo-2@1x.png">
+            <source media="(max-width: 600px)" srcset="img/Pink-logo-1.png">
             <img src="img/Pink-logo-1.png" alt="Pink">
           </picture>
         </div>
         <nav class="main-nav">
           <a class="main-nav__toggle" href="">
-            <img src="img/menu-burger.svg" alt="">
+<!--            <img src="img/menu-burger.svg" alt="">-->
+            <i class="icon-menu-burger"></i>
           </a>
           <ul class="main-nav__list">
             <li class="main-nav__item"><a href="">Информация</a></li>
@@ -62,8 +65,8 @@
     </div>
     
     <div class="about-app">
-      <svg class="svg-angle" preserveAspectRatio="none" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-        <polygon fill="inherit" points="50,0 0,50 0,0"></polygon>
+      <svg class="svg-angle" preserveAspectRatio="none" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+        <polygon fill="inherit" points="30,0 0,30 0,0"></polygon>
       </svg>
       <div class="center-wrapper">
         <div class="about-app__wrapper">
@@ -82,8 +85,11 @@
             </div>
             <div class="screenshots__item">
               <picture>
-                <source media="(min-resolution: 1.5dppx)" srcset="img/iphone-screen-3-3@2x.png">
-                <img src="img/iphone-screen-3-3@1x.png" alt="Третий скрин">
+                <source media="(min-resolution: 1.5dppx) and (min-width: 1200px)" srcset="img/iphone-screen-3-3@2x.png">
+                <source media="(max-resolution: 1.5dppx) and (min-width: 1200px)" srcset="img/iphone-screen-3-3@1x.png">
+                <source media="(min-width: 600px) and (max-width: 1200px)" srcset="img/iphone-screen-2-3@1x.png">
+                <source media="(max-width: 600px)" srcset="img/screen-1-3.png">
+                <img src="img/screen-1-3.png" alt="Третий скрин">
               </picture>
             </div>
           </div>
@@ -109,7 +115,7 @@
       <div class="center-wrapper">
         <div class="effect__wrapper">
           <div class="effect__timer">
-            <div class="effect__timer-details">24</div>
+<!--            <div class="effect__timer-details">24</div>-->
           </div>
           <div class="effect__text-wrapper">
             <h2 class="effect__promo">Эффект на 24 часа!</h2>
@@ -124,6 +130,16 @@
       <div class="center-wrapper">
         <div class="slider-comments">
           <a href="" class="control-arrow"></a>
+          
+          <input class="control-radio" type="radio" id="comment-btn1" name="comment-toggle" checked>
+          <input class="control-radio" type="radio" id="comment-btn2" name="comment-toggle">
+          <input class="control-radio" type="radio" id="comment-btn3" name="comment-toggle">
+          
+          <div class="controls">
+            <label for="comment-btn1" class="controls__item"></label>
+            <label for="comment-btn2" class="controls__item"></label>
+            <label for="comment-btn3" class="controls__item"></label>
+          </div>
           
           <div class="comment-wrapper">
             <blockquote class="comment">
@@ -145,12 +161,8 @@
               <p class="comment__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ut fuga eius deleniti, obcaecati eum minus molestias voluptates, recusandae itaque vero mollitia velit hic ex! Reiciendis, sequi, cumque. Numquam, doloremque.</p>
             </blockquote>
           </div>
+          
           <a href="" class="control-arrow control-arrow--right"></a>
-          <div class="controls">
-            <a class="controls__item controls__item--active" href=""></a>
-            <a class="controls__item" href=""></a>
-            <a class="controls__item" href=""></a>
-          </div>
         </div>
       </div>
     </section>
@@ -159,76 +171,99 @@
      <svg class="svg-angle" preserveAspectRatio="none" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
         <polygon fill="inherit" points="50,0 0,50 0,0"></polygon>
       </svg>
-      <table class="tariffs__features">
-        <thead class="tariffs__row-header">
-          <tr class="tariffs__header">
-            <th class="tariffs__cell--no-mobile"> 
-            </th>
-            <th>
-              <p class="tariffs__name">База</p>
-              <p class="tariffs__price">1,99 USD</p>
-            </th>
-            <th>
-              <div class="tariffs__hit">ХИТ</div>
-              <p class="tariffs__name">Стандарт</p>
-              <p class="tariffs__price">3,99 USD</p>
-            </th>
-            <th>
-              <p class="tariffs__name">Анлим</p>
-              <p class="tariffs__price">9,99 USD</p>
-            </th>
+      <div class="tariffs__wrapper">
+        <input class="control-radio" type="radio" id="price-btn1" name="price-toggle" checked>
+          <input class="control-radio" type="radio" id="price-btn2" name="price-toggle">
+          <input class="control-radio" type="radio" id="price-btn3" name="price-toggle">
+        <table class="tariffs__features">
+          <thead class="tariffs__row-header">
+            <tr class="tariffs__header">
+              <th class="tariffs__cell--no-mobile"> 
+              </th>
+              <th>
+                <p class="tariffs__name">База</p>
+                <p class="tariffs__price">1,99 USD</p>
+              </th>
+              <th>
+                <div class="tariffs__hit">ХИТ</div>
+                <p class="tariffs__name">Стандарт</p>
+                <p class="tariffs__price">3,99 USD</p>
+              </th>
+              <th>
+                <p class="tariffs__name">Анлим</p>
+                <p class="tariffs__price">9,99 USD</p>
+              </th>
+            </tr>
+          </thead>
+          <tr>
+            <td class="tariffs__cell--no-mobile">Розовый фильтр</td>
+            <td>
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Розовый фильтр</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>
+            </td>
+            <td>
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Розовый фильтр</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>  
+            </td>
+            <td >
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Розовый фильтр</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>  
+            </td>          
           </tr>
-        </thead>
-        <tr>
-          <td class="tariffs__cell--no-mobile">Розовый фильтр</td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Розовый фильтр</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
-          </td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Розовый фильтр</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>  
-          </td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Розовый фильтр</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>  
-          </td>          
-        </tr>
-        <tr>
-          <td class="tariffs__cell--no-mobile">Смайлики</td>
-          <td class="tariffs__cell--crossed">
-            <span class="tariffs__cell--mobile">Смайлики</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
-          </td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Смайлики</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
-          </td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Смайлики</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
-          </td>
-        </tr>
-        <tr>
-          <td class="tariffs__cell--no-mobile">Комментарии</td>
-          <td class="tariffs__cell--crossed">
-            <span class="tariffs__cell--mobile">Комментарии</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
-          </td>
-          <td class="tariffs__cell--crossed">
-            <span class="tariffs__cell--mobile">Комментарии</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>  
-          </td>
-          <td class="tariffs__cell--checked">
-            <span class="tariffs__cell--mobile">Комментарии</span>
-            <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
-          </td>
-        </tr>
-      </table>
-      <div class="controls">
-        <a href="" class="controls__item controls__item--active"></a>
-        <a href="" class="controls__item"></a>
-        <a href="" class="controls__item"></a>
+          <tr>
+            <td class="tariffs__cell--no-mobile">Смайлики</td>
+            <td>
+              <div class="tariffs__cell--crossed">
+                <span class="tariffs__cell--mobile">Смайлики</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
+              </div>
+            </td>
+            <td>
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Смайлики</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>
+            </td>
+            <td>
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Смайлики</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="tariffs__cell--no-mobile">Комментарии</td>
+            <td>
+              <div class="tariffs__cell--crossed">
+                <span class="tariffs__cell--mobile">Комментарии</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
+              </div>
+            </td>
+            <td>
+              <div class="tariffs__cell--crossed">
+                <span class="tariffs__cell--mobile">Комментарии</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/no_opt.svg" alt=""></span>
+              </div>  
+            </td>
+            <td>
+              <div class="tariffs__cell--checked">
+                <span class="tariffs__cell--mobile">Комментарии</span>
+                <span class="tariffs__cell--no-mobile"><img src="img/yes_opt.svg" alt=""></span>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="controls">
+          <label for="price-btn1" class="controls__item"></label>
+          <label for="price-btn2" class="controls__item"></label>
+          <label for="price-btn3" class="controls__item"></label>
+        </div>
       </div>
     </section>
   </main>
@@ -246,7 +281,7 @@
           </li>
           <li class="contacts__item">
             <p class="contacts__name">Пишите:</p>
-            <p class="contacts__address contacts__item-address--mail">hello@pinkapp.ru</p>
+            <p class="contacts__address contacts__address--mail">hello@pinkapp.ru</p>
           </li>
           <li class="contacts__item">
             <p class="contacts__name">Приезжайте в гости:</p>
@@ -270,19 +305,27 @@
             <img src="img/Pink-logo-footer-2@1x.png" srcset="img/Pink-logo-footer-2@2x.png 2x">
           </picture>
           <div class="social">
-            <a href="" class="social__item social__item--tw"></a>
-            <a href="" class="social__item social__item--fb"></a>
-            <a href="" class="social__item social__item--yt"></a>
+            <a href="" class="social__item social__item--tw">
+              <i class="icon-twitter"></i>
+            </a>
+            <a href="" class="social__item social__item--fb">
+              <i class="icon-facebook"></i>
+            </a>
+            <a href="" class="social__item social__item--yt">
+              <i class="icon-youtube"></i>
+            </a>
           </div>
           <div class="copyright">
             <p>
               Website by 
-              <a href="glukhanko">
-                <img src="img/glukhanko_opt.svg" alt="">
+              <a href="" class="copyright__item">
+<!--                <img src="img/glukhanko_opt.svg" alt="">-->
+               <i class="icon-glukhanko"></i>
               </a>
               for
-              <a href="htmlacademy">
-                <img src="img/htmlacademy_opt.svg" alt="">
+              <a href="" class="copyright__item">
+<!--                <img src="img/htmlacademy_opt.svg" alt="">-->
+               <i class="icon-htmlacademy"></i>
               </a>
             </p>
           </div>
@@ -297,5 +340,6 @@
   <script src="js/picturefill.js" async></script>
   <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="js/script.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

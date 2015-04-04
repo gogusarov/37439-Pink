@@ -4,7 +4,10 @@
   
   &__timer {
     position: relative;
-    background: url("../../img/timer-2_opt.svg") no-repeat 50% 50%;
+    background: url("../../img/timer.png") no-repeat 50% 50%;
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      background-size: 263px 302px;
+    }
   }
   
   &__timer-details {
