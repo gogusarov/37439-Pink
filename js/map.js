@@ -1,7 +1,7 @@
-ymaps.ready(init);
+(function () {
+  ymaps.ready(init);
  
-function init(){     
- 
+  function init(){
     var myMap,
         myPlacemark;
  
@@ -12,8 +12,12 @@ function init(){
     });
   
     myPlacemark = new ymaps.Placemark([59.9343, 30.3329], { 
-      hintContent: 'Мы здесь!', 
-      balloonContent: 'Pink luxury office' 
+      hintContent: 'Мы здесь!'
+    },{
+      iconLayout: 'default#image',
+      iconImageHref: 'https://raw.githubusercontent.com/gogusarov/Pink/master/img/balloon.png',
+      iconImageSize: [36, 36],
+      iconImageOffset: [0, -60]
     });
 
     myMap.geoObjects.add(myPlacemark);
@@ -24,3 +28,4 @@ function init(){
         position: {top: 15, left: 15}
     });
 }
+})();

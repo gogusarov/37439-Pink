@@ -1,0 +1,30 @@
+@media (max-width: @tablet-breakpoint) {
+  .js-menu .main-nav__list {
+    display: none;
+  }
+
+
+  .js-menu--open .main-nav__list {
+    display: block;
+  }
+
+  .js-menu .page-header__toggle i:first-of-type {
+    display: block;
+  }
+
+  .js-menu .page-header__toggle i:last-of-type {
+    display: none;
+  }
+
+  .js-menu--open .page-header__toggle i:last-of-type {
+    display: block;
+  }
+
+  .js-menu--open .page-header__toggle i:first-of-type {
+    display: none;
+  }
+
+  .js-menu--open {
+    background: @bg-menu-item;
+  }
+}

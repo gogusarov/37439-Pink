@@ -7,8 +7,14 @@
   
   &__item {
     &--mobile-margin {
-      @media(max-width: @mobile-breakpoint) {
-        margin-bottom: 30px;
+      @media (max-width: @mobile-breakpoint) {
+        display: inline-block;
+        margin-top: 30px;
+      }
+    }
+    &--no-mobile {
+      @media (max-width: @mobile-breakpoint) {
+        display: none;
       }
     }
     font-weight: @font-weight-light;

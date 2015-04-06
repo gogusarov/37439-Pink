@@ -1,17 +1,29 @@
+.comments {
+  padding-bottom: 30px
+}
+
 .slider-comments {
   position: relative;
-  
-  .control-arrow {
-    display: none;
-    width: 22px;
-    height: 42px;
-    background: url("../img/left-arrow.jpg");
-    @media (min-width: @tablet-breakpoint) {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    &--right {
-      transform: rotate(180deg);
+  margin: 0 auto;
+  .control-arrows {
+    &__item {
+      display: none;
+      border: none;
+      width: 22px;
+      height: 42px;
+      position: relative;
+      bottom: 120px;
+      background: url("../img/left-arrow.jpg");
+      @media (min-width: @tablet-breakpoint) {
+        display: inline-block;
+      }
+      &--right {
+        transform: rotate(180deg);
+        right: -350px;
+      }
+      &--left {
+        left: -350px;
+      }
     }
   }
   
@@ -24,6 +36,8 @@
   
   @media (min-width: @tablet-breakpoint) {
     padding-top: 150px;
+    width: 780px;
+    overflow: hidden;
     &:before {
       position: absolute;
       content: '';
@@ -60,17 +74,21 @@
 .comment-wrapper {
   position: relative;
   @media (max-width: @mobile-breakpoint) {
-    height: 150px; 
+    height: 120px;
+    left: 0px;
   }
   @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
     width: 620px;
     height: 160px;
+    left: 0px;
   }
   
   @media (min-width: @tablet-breakpoint) {
-    display: inline-block;
-    vertical-align: middle;
-    width: 780px;
+    width: 2340px;
+    height: 150px;
+    positon: relative;
+    transition: left 500ms linear;
+    .clearfix();
   }
 }
 
@@ -82,7 +100,12 @@
     width: 100%;
     height: 100%;
   }
-  
+  @media (min-width: @tablet-breakpoint) {
+    float: left;
+    position: relative;
+    width: 780px;
+    height: 150px;
+  }
   &__about-author {
     span {
       display: none;
