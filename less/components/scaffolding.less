@@ -13,8 +13,85 @@ ul {
   padding: 0;
 }
 
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .clearfix() {
-  content: '';
-  display: block;
-  clear: both;
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.center-wrapper {  
+  .clearfix();
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  @media (min-width: @mobile-breakpoint) {
+    &--mobile {
+      width: auto;
+    }
+  }
+  @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+    width: 620px;
+    &--tablet {
+      width: auto;
+    }
+  }
+  
+  @media (min-width: @tablet-breakpoint) {
+    width: 940px;
+  }
+}
+
+@media (min-width: @mobile-breakpoint) {
+  .left-wrapper {
+    float: left;
+  }
+  
+  .right-wrapper {
+    float: right;
+  }
+}
+
+.control-radio {
+  display: none;
+}
+
+.controls {
+  text-align: center;
+  &__item {
+    display: inline-block;
+    vertical-align: center;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #bec2c7;
+    border: 3px solid white;
+    cursor: pointer;
+    &--active {
+      background: white;
+      border: 3px solid @controls-active-color;
+    }
+  }
+}
+
+.svg-angle {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  fill: white;
 }
