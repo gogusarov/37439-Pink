@@ -1,0 +1,25 @@
+@import 'variables.less';
+
+.btn {
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 28px;
+    padding: 14px 35px;
+    margin: 18px 0;
+    cursor: pointer;
+    font-weight: @font-weight-bold;
+    &:hover {
+      color: @pink;
+      background: white;
+    }
+    &:active {
+      color: #f2ced5;
+      background: white;
+    }
+    @media (max-width: @tablet-breakpoint) {
+      font-size: @size-btn;
+    }
+    @media (min-width: @tablet-breakpoint) {
+      font-size: @size-btn-desktop;
+    }
+}

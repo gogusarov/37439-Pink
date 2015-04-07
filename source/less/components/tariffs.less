@@ -1,0 +1,155 @@
+.tariffs {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  background: @bg-tariffs;
+  &__wrapper {
+    position: relative;
+    @media (max-width: @mobile-breakpoint) {
+      width: 320px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+  }
+  &__features {
+    margin: 0 auto;
+    border-collapse: collapse;
+    transition: transform 1s ease;
+  }
+  &__header {
+    background: @blue;
+  }
+  &__hit {
+    position: absolute;
+    left: -18%;
+    top: 10%;
+    width: 50%;
+    padding: 5px 0;
+    color: white;
+    font-size: @size-tariffs-hit;
+    background: @pink;
+    transform: rotate(-45deg);
+  }
+  &__cell {
+    &--no-mobile {
+      @media (max-width: @mobile-breakpoint) {
+        display: none;
+      }
+    }
+    &--mobile {
+      @media (min-width: @mobile-breakpoint) {
+        display: none;
+      }
+    }
+    &--checked {
+      position: relative;
+      @media (max-width: @mobile-breakpoint) {
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 30px;
+          height: 22px;
+          top: -5px;
+          right: 14px;
+          background: url("../img/yes_opt.svg");
+        }
+      }
+    }
+    &--crossed {
+      position: relative;
+      @media (max-width: @mobile-breakpoint) {
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 26px;
+          height: 26px;
+          top: -5px;
+          right: 15px;
+          background: url("../img/no_opt.svg");
+        } 
+      }
+    }
+  }
+  th {
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    width: 280px;
+    border: 2px solid @tariffs-border-color;
+    &:first-child {
+      background: @bg-tariffs;
+      border-top: none;
+      border-left: none;
+    }
+  }
+  td {
+    //position: relative;
+    box-sizing: border-box;
+    min-width: 280px;
+    padding: 10px 20px;
+    border: 2px solid @tariffs-border-color;
+    text-align: left;
+    font-size: @size-tariffs-feature;
+    font-weight: @font-weight-light;
+    text-transform: uppercase;
+    background: white;
+    @media (min-width: @mobile-breakpoint) {
+      text-align: center;
+      text-transform: none;
+      min-width: 155px;
+      &:first-child {
+        text-align: left;
+      }
+    }
+    @media (min-width: @tablet-breakpoint) {
+      min-width: 235px;
+      font-size: @size-tariffs-feature-desktop;
+    }
+  }
+  &__name {
+    color: white;
+    font-size: @size-tariffs-name;
+    font-weigth: @font-weight-bold;
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      font-size: @size-tariffs-name-tablet;
+    }
+  }
+  &__price {
+    color: white;
+    font-size: @size-tariffs-price;
+    font-weight: @font-weight-light;
+    @media (min-width: @mobile-breakpoint) and (max-width: @tablet-breakpoint) {
+      font-size: @size-tariffs-price-tablet;
+    }
+  }
+  .controls {
+    padding-top: 40px;
+    @media (min-width: @mobile-breakpoint) {
+      &__item {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media (max-width: @mobile-breakpoint) {
+  #price-btn1:checked ~ .controls label[for="price-btn1"],
+  #price-btn2:checked ~ .controls label[for="price-btn2"],
+  #price-btn3:checked ~ .controls label[for="price-btn3"] {
+    background: white;
+    border: 3px solid @controls-active-color;
+  }
+
+  #price-btn1:checked ~ .tariffs__features {
+    transform: translateX(0px);
+  }
+  #price-btn2:checked ~ .tariffs__features {
+    transform: translateX(-260px);
+  }
+  #price-btn3:checked ~ .tariffs__features {
+    transform: translateX(-520px);
+  }
+}
